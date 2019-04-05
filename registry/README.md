@@ -4,8 +4,14 @@
 
 ## Installation
 
+```
+```
 
 ## Use
+
+```
+const Registry = require('./registry')
+```
 
 
 ## API
