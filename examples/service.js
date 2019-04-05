@@ -16,7 +16,6 @@ const EventEmitter = require('events');
 var updater = new Updater();
 
 
-
 const once = EventEmitter.once;
 //
 
