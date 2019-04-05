@@ -13,7 +13,7 @@ const Ingestor = require("./etl");
 //const other
 //Ora
 
-const Curkel = require('../index')
+const Curkel = require('curkel-db')
 //authenticat
 
 //...
