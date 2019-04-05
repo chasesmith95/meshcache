@@ -1,0 +1,3 @@
+[submodule "ora"]
+	path = ora
+	url = https://github.com/chasesmith95/ora
