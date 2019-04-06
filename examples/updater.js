@@ -45,26 +45,19 @@ class Updater extends EventEmitter {
 async requesting(request, sender = null) {
 
     let checked = await this.check(request);
-
     //Check request
     if (checked) {
       const str = JSON.stringify(request);
-      //Convert request
-
-
-
       //enqueue request
       this.queue.push(str);
       //returns
       if (this.running == false) {
         this.running = true;
         this.startUp();
-        this.running = false;
       }
 
     }
-
-    }
+}
 
 
 
@@ -89,7 +82,7 @@ unpack(str, m = -1) {
         var char = str.charCodeAt(i%l);
         bytes.push(char >>> 8, char & 0xFF);
     }
-    return new Buffer(bytes);
+    return new Buffer.from(bytes);
 }
 
 /*
@@ -103,13 +96,15 @@ async check(request) {
     return true;
   } else {
     var r = await Curkel.get(name, k);
+
     if (r.value) {
-      console.log(this.pack(r.value))
-      var value = JSON.parse(this.pack(r.value));
+      var val = this.pack(r.value);
+      var value = JSON.parse(val);
       return (value.id < v.id);
     } else {
       return true
     }
+
   }
 }
 
@@ -119,7 +114,9 @@ This is where the Ora will go
 */
 async update(request) {
   let name = request.name;
+//  console.log(request)
   let k = this.unpack(request.key.toString(), 16);
+  //console.log(k)
   if (request.value) {
     let v = this.unpack(JSON.stringify(request.value));
     return await Curkel.put(name, k, v);
@@ -130,16 +127,18 @@ async update(request) {
 
 
 async startUp() {
+
   while (this.queue.length > 0) {
     var str = this.queue.shift();
-
     var request = JSON.parse(str);
     var response = await this.update(request);
+    //console.log(response)
     if (response.value) {
       response.value = this.pack(response.value);
     }
     this.emit(str, response);
   }
+  this.running = false;
 }
 
 

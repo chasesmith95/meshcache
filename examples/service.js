@@ -20,6 +20,10 @@ const once = EventEmitter.once;
 //
 
 async function get(name, key) {
+  let blockRequest = {
+    key: key,
+    name: name
+  };
   await updater.requesting(blockRequest);
   let value = await once(updater, JSON.stringify(blockRequest))
   return value
@@ -48,3 +52,6 @@ async function blockHash() {
   let key = "blockHash"
   return await get(name, key)
 }
+
+
+module.exports = {supply, blockHash, slot, epoch}
