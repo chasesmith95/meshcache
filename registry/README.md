@@ -5,12 +5,13 @@
 ## Installation
 
 ```
+npm install meshcache-registry
 ```
 
 ## Use
 
 ```
-const Registry = require('./registry')
+const Registry = require('meshcache-registry')
 ```
 
 
