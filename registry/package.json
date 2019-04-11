@@ -1,5 +1,5 @@
 {
-  "name": "registry",
+  "name": "meshcache-registry",
   "version": "1.0.0",
   "description": "",
   "main": "registry.js",

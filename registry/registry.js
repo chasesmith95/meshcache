@@ -242,6 +242,10 @@ let abi = [
 let contract = web3.eth.Contract(abi, registryAddress);
 
 
+async function getContractAddress() {
+	return registryAddress;
+}
+
 async function getServices() {
   var services = await contract.methods.getServices().call();
   //console.log(services)
@@ -275,5 +279,5 @@ async function main() {
   console.log(end - start);
 }
 
-registry = {getBootstraps, getService, getServices};
+registry = {getBootstraps, getService, getServices, getContractAddress};
 module.exports = registry;
