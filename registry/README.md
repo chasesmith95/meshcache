@@ -28,10 +28,16 @@ This function returns the address of the registry.
 
 ### getServices()
 
+```javascript
+
+```
 This function returns the list of services by ID. 
 
 
 ### getService(serviceId)
+```javascript
+
+```
 | name  |  type |  description  
 |---    |---    |     ---         |
 |  serviceId | uint256  |  id of the service |
