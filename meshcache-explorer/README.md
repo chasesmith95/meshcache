@@ -1,6 +1,8 @@
 # Meshcache Service Explorer
 
-The service explorer is designed to show the services and tables within the space. To check out 
+The service explorer is designed to show the services and tables within the space. To check out the live version direct your attention here :). 
+
+[Explorer]()
 
 ## Installation
 
@@ -18,6 +20,12 @@ npm start
 npm start
 ```
 
+
+Upon deploying the explorer will be deployed to ....., with  a console message that looks like: 
+
+```console
+
+```
 
 ![alt text][meshcache-ui]
 
