@@ -50,7 +50,8 @@ This returns the associated service variables.
 
 ### getBootstraps(serviceId)
 ```javascript
-registry.getRegistryAddress()
+var serviceId = services[0]
+registry.getBootstraps(serviceId)
 ```
 | name  |  type |  description  
 |---    |---    |     ---         |
