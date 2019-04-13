@@ -5,7 +5,33 @@ Here is the Cardano demo.
 
 ## Explorer 
 
-## Web API
+
+## API
+
+### Current Stats 
+The current status of the blockchain. 
+
+#### Supply 
+
+#### Epoch
+
+#### Slot 
+
+#### BlockHash
+
+
+### Blocks 
+
+#### 
+
+
+
+### Transactions 
+  
+#### 
+
+
+
 
 
 
@@ -20,14 +46,6 @@ const CardanoClient = require('cardano-client')
 ````
 
 ## Documentation
-
-
-
-
-
-
-
-### Node Client
 
 #### 
 
