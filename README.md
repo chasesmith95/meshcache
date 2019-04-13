@@ -25,8 +25,14 @@ The core components:
 There are several client demos for meshcache. 
 
 ## Tutorial
-Meshcache tutorials and documentation can be found
+Meshcache tutorials and documentation can be found in the following folders. 
 
+
+## Contribution Guidelines
 
 ## Next Steps
 Obviously, there are many cool features and functionality that can be added.
+
+
+
+
