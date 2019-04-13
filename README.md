@@ -5,9 +5,10 @@ Decentralized Data Layer for Web 3.0
 
 ## Important Links
 
-- [Database]()
-- [Ruffle]()
+- [Ruffle](https://github.com/chasesmith95/meshcache/tree/master/authenticated%20data/ruffle)
+- [Authenticated Database (Curkel)]()
 - [Registry]()
+- [Explorer]()
 - [Ora](https://github.com/chasesmith95/ora/blob/master/demo/README.md)
 
 
