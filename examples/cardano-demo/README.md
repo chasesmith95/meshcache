@@ -4,10 +4,16 @@ Here is the Cardano demo.
 
 ## Installation
 - ### Node
+'''
+npm install --save cardano-client
+'''
+
+```javascript 
+const CardanoClient = require('cardano-client')
+````
+
 - ### Web
 
-
-- web
 
 ## Explorer 
 
