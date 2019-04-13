@@ -48,7 +48,7 @@ This returns the associated service variables.
 
 
 
-### getBootstraps(serviceId)
+### Get Bootstraps
 ```javascript
 var serviceId = services[0]
 registry.getBootstraps(serviceId)
