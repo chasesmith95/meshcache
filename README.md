@@ -7,6 +7,10 @@ Meshcache represents a revolution in the technology arena.
 ## Intro
 
 
+
+Check us out!
+(oraprotocol.com)
+
 ## Important Links
 
 - [Ruffle](https://github.com/chasesmith95/meshcache/tree/master/authenticated%20data/ruffle)
@@ -28,6 +32,7 @@ The core components:
 ## Documents
 - [White paper]()
 - [Vision]()
+- [Deck]()
 
 ## Demos
 There are several client demos for meshcache. 
