@@ -49,7 +49,7 @@ This returns the associated service variables.
 
 ### getBootstraps(serviceId)
 ```javascript
-
+registry.getRegistryAddress()
 ```
 | name  |  type |  description  
 |---    |---    |     ---         |
