@@ -20,6 +20,10 @@ const Registry = require('meshcache-registry')
 
 ### getRegistryAddress()
 
+```javascript
+
+```
+
 This function returns the address of the registry. 
 
 ### getServices()
