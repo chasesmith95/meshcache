@@ -29,7 +29,7 @@ The core components:
 - [White paper]()
 - [Vision]()
 
-## Demo
+## Demos
 There are several client demos for meshcache. 
   - Cardano()
   - EOS()
