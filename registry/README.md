@@ -30,7 +30,7 @@ This function returns the address of the registry.
 ### getServices()
 
 ```javascript
-registry.getRegistryAddress()
+var services = registry.getServices()
 ```
 This function returns the list of services by ID. 
 
