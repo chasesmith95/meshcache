@@ -4,6 +4,8 @@ Decentralized Data Layer for Web 3.0
 
 Meshcache represents a revolution in the technology arena. 
 
+## Intro
+
 
 ## Important Links
 
@@ -13,7 +15,7 @@ Meshcache represents a revolution in the technology arena.
 - [Registry](https://github.com/chasesmith95/meshcache/tree/master/registry)
 - [Explorer](https://github.com/chasesmith95/meshcache/tree/master/meshcache-explorer)
 - [Ora](https://github.com/chasesmith95/ora/blob/master/demo/README.md)
-
+  
 ## Architecture 
 
 The core components:
@@ -22,8 +24,15 @@ The core components:
 - Mesh P2P Network 
 - Registry Contract and Authentication
 
+
+## Documents
+- [White paper]()
+- [Vision]()
+
 ## Demo
 There are several client demos for meshcache. 
+  - Cardano()
+  - EOS()
 
 ## Tutorial
 Meshcache tutorials and documentation can be found in the following folders. 
