@@ -6,6 +6,27 @@ Here is the Cardano demo.
 ## Explorer 
 
 
+### Setup and Installation
+
+```console
+git clone "https://github.com/chasesmith95/meshcache"
+cd meshcache 
+cd examples/cardano-demo
+npm install
+npm start
+```
+
+This should give you the following console message, and deploy the explorer to http://localhost:3000
+
+```console 
+
+
+````
+
+
+### Explorer 
+
+
 
 ### Explorer API
 
@@ -18,6 +39,15 @@ The current status of the blockchain.
 curl GET "localhost:3000/supply"
 ```
 
+Returns 
+
+```JSON
+{
+blockHash: "",
+id: 56 
+}
+
+```
 
 ##### Epoch
 
@@ -25,10 +55,30 @@ curl GET "localhost:3000/supply"
 curl GET "localhost:3000/epoch"
 ```
 
+Returns 
+
+```JSON
+{
+blockHash: "",
+id: 56 
+}
+
+```
+
 ##### Slot 
 
 ```
 curl GET "localhost:3000/slot"
+```
+
+Returns 
+
+```JSON
+{
+blockHash: "",
+id: 56 
+}
+
 ```
 
 ##### BlockHash
