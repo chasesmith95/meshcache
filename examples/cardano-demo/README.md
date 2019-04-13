@@ -6,29 +6,43 @@ Here is the Cardano demo.
 ## Explorer 
 
 
-## API
 
-### Current Stats 
+### Explorer API
+
+#### Current Stats 
 The current status of the blockchain. 
 
-#### Supply 
+##### Supply 
 
-#### Epoch
-
-#### Slot 
-
-#### BlockHash
+```
+curl "localhost:3000/supply"
+```
 
 
-### Blocks 
+##### Epoch
 
-#### 
+```
+curl "localhost:3000/supply"
+```
+
+##### Slot 
+
+```
+curl "localhost:3000/supply"
+```
+
+##### BlockHash
+
+```
+curl "localhost:3000/supply"
+```
+
+
+#### Blocks  
 
 
 
-### Transactions 
-  
-#### 
+#### Transactions 
 
 
 
