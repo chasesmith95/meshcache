@@ -30,14 +30,14 @@ This function returns the address of the registry.
 ### getServices()
 
 ```javascript
-
+registry.getRegistryAddress()
 ```
 This function returns the list of services by ID. 
 
 
 ### getService(serviceId)
 ```javascript
-
+registry.getRegistryAddress()
 ```
 | name  |  type |  description  
 |---    |---    |     ---         |
