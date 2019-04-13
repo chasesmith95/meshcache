@@ -15,26 +15,36 @@ The current status of the blockchain.
 ##### Supply 
 
 ```
-curl "localhost:3000/supply"
+curl GET "localhost:3000/supply"
 ```
 
 
 ##### Epoch
 
 ```
-curl "localhost:3000/supply"
+curl GET "localhost:3000/epoch"
 ```
 
 ##### Slot 
 
 ```
-curl "localhost:3000/supply"
+curl GET "localhost:3000/slot"
 ```
 
 ##### BlockHash
 
 ```
-curl "localhost:3000/supply"
+curl GET "localhost:3000/blockHash"
+```
+
+Returns 
+
+```JSON
+{
+blockHash: "",
+id: 56 
+}
+
 ```
 
 
