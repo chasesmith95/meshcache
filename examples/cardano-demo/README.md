@@ -2,24 +2,29 @@
 
 Here is the Cardano demo.
 
-## Installation
-- ### Node
-'''
+
+## Explorer 
+
+## Web API
+
+
+
+## Installation and Use
+
+```
 npm install --save cardano-client
-'''
+```
 
 ```javascript 
 const CardanoClient = require('cardano-client')
 ````
 
-- ### Web
-
-
-## Explorer 
-
 ## Documentation
 
-### Web API
+
+
+
+
 
 
 ### Node Client
