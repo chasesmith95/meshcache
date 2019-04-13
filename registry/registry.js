@@ -266,7 +266,7 @@ async function getBootstraps(serviceId) {
 }
 
 
-
+/*
 async function main() {
   var d = new Date();
   var start = d.getTime();
@@ -278,6 +278,7 @@ async function main() {
 
   console.log(end - start);
 }
+*/
 
 registry = {getBootstraps, getService, getServices, getContractAddress};
 module.exports = registry;
