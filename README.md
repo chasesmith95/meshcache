@@ -54,6 +54,7 @@ There are several client demos for meshcache.
 ## Tutorial
 Meshcache tutorials and documentation can be found in the following folders. 
 
+Tutorials on the way!
 
 ## Contribution Guidelines
 
