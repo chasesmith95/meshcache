@@ -26,9 +26,21 @@ This should give you the following console message, and deploy the explorer to h
 
 ### Explorer 
 
+Once the explorer is deployed, you should be able to navigate to http://localhost:3000 to get a view of the explorer. 
+
+It should look like: 
+
+
 
 
 ### Explorer API
+
+The explorer web api is composed of three parts: 
+
+- Stats
+- Blocks 
+- Transactions
+
 
 #### Current Stats 
 The current status of the blockchain. 
@@ -43,7 +55,7 @@ Returns
 
 ```JSON
 {
-blockHash: "",
+supply: "",
 id: 56 
 }
 
@@ -59,7 +71,7 @@ Returns
 
 ```JSON
 {
-blockHash: "",
+epoch: "",
 id: 56 
 }
 
@@ -75,7 +87,7 @@ Returns
 
 ```JSON
 {
-blockHash: "",
+slot: "",
 id: 56 
 }
 
@@ -98,13 +110,15 @@ id: 56
 ```
 
 
+
 #### Blocks  
 
+##### Not Implemented
 
 
 #### Transactions 
 
-
+##### Not Implemented
 
 
 
