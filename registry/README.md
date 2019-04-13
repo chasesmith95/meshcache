@@ -27,7 +27,7 @@ registry.getRegistryAddress()
 
 This function returns the address of the registry. 
 
-### getServices()
+### Get Services
 
 ```javascript
 var services = registry.getServices()
@@ -35,7 +35,7 @@ var services = registry.getServices()
 This function returns the list of services by ID. 
 
 
-### getService(serviceId)
+### Get Service 
 ```javascript
 var serviceId = services[0]
 registry.getService(serviceId)
