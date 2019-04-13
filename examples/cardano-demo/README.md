@@ -121,6 +121,8 @@ id: 56
 ##### Not Implemented
 
 
+_____________________________________________________________________
+
 
 
 ## Installation and Use
@@ -135,7 +137,11 @@ const CardanoClient = require('cardano-client')
 
 ## Documentation
 
-#### 
+The client api is composed of three parts: 
+
+- Stats
+- Blocks 
+- Transactions
 
 #### Create
 
