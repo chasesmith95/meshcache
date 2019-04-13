@@ -9,7 +9,7 @@ Meshcache represents a revolution in the technology arena.
 
 
 Check us out!
-(oraprotocol.com)
+[oraprotocol.com]
 
 ## Important Links
 
