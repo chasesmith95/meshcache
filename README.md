@@ -8,7 +8,8 @@ Meshcache represents a revolution in the technology arena.
 ## Important Links
 
 - [Ruffle](https://github.com/chasesmith95/meshcache/tree/master/authenticated%20data/ruffle)
-- [Authenticated Database (Curkel)](https://github.com/chasesmith95/meshcache/tree/master/authenticated%20data/curkel-db)
+- [Authenticatd Database](https://github.com/chasesmith95/meshcache/tree/master/authenticated%20data)
+- [Authenticated Data structure (Curkel)](https://github.com/chasesmith95/meshcache/tree/master/authenticated%20data/curkel-db)
 - [Registry](https://github.com/chasesmith95/meshcache/tree/master/registry)
 - [Explorer](https://github.com/chasesmith95/meshcache/tree/master/meshcache-explorer)
 - [Ora](https://github.com/chasesmith95/ora/blob/master/demo/README.md)
