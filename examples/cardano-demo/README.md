@@ -24,7 +24,7 @@ This should give you the following console message, and deploy the explorer to h
 ````
 
 
-### Explorer 
+### Explorer Dashboard
 
 Once the explorer is deployed, you should be able to navigate to http://localhost:3000 to get a view of the explorer. 
 
@@ -123,6 +123,7 @@ id: 56
 
 _____________________________________________________________________
 
+## Cardano Node Client 
 
 
 ## Installation and Use
@@ -135,15 +136,26 @@ npm install --save cardano-client
 const CardanoClient = require('cardano-client')
 ````
 
+
 ## Documentation
 
-The client api is composed of three parts: 
-
-- Stats
+The client is composed of three separate tables or indexes: 
+- Current Stats
 - Blocks 
 - Transactions
 
-#### Create
+### Getting Tables 
+
+```javascript 
+
+
+```
+
+
+### Current Stats 
+
+
+#### Supply 
 
 | name  |  type |  description  
 |---    |---    |     ---         |
@@ -160,5 +172,71 @@ let schema = {
 }
 var transactions = ruffle.create(table, schema)
 ```
+
+
+#### Epoch
+
+| name  |  type |  description  
+|---    |---    |     ---         |
+|  table | string  |  name of the table |
+|  schema | JSON  |  schema for the table |
+
+This creates a table with name, tableName, and returns a confirmation boolean if correct.
+
+```javascript
+let table = "transactions"
+let schema = {
+  balance: 'uint'
+  account: 'string'
+}
+var transactions = ruffle.create(table, schema)
+```
+
+
+#### Slot 
+
+| name  |  type |  description  
+|---    |---    |     ---         |
+|  table | string  |  name of the table |
+|  schema | JSON  |  schema for the table |
+
+This creates a table with name, tableName, and returns a confirmation boolean if correct.
+
+```javascript
+let table = "transactions"
+let schema = {
+  balance: 'uint'
+  account: 'string'
+}
+var transactions = ruffle.create(table, schema)
+```
+
+
+#### Blockhash 
+
+| name  |  type |  description  
+|---    |---    |     ---         |
+|  table | string  |  name of the table |
+|  schema | JSON  |  schema for the table |
+
+This creates a table with name, tableName, and returns a confirmation boolean if correct.
+
+```javascript
+let table = "transactions"
+let schema = {
+  balance: 'uint'
+  account: 'string'
+}
+var transactions = ruffle.create(table, schema)
+```
+
+
+### Blocks 
+
+
+
+### Transactions
+
+
 
 
