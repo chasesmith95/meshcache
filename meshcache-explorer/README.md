@@ -1,9 +1,8 @@
 # Meshcache Service Explorer
 
-The service explorer is designed to show the service
+The service explorer is designed to show the services and tables within the space. To check out 
 
 ## Installation
-
 
 ```
 git clone https://github.com/chasesmith95/meshcache
