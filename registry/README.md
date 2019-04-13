@@ -37,7 +37,8 @@ This function returns the list of services by ID.
 
 ### getService(serviceId)
 ```javascript
-registry.getRegistryAddress()
+var serviceId = services[0]
+registry.getService(serviceId)
 ```
 | name  |  type |  description  
 |---    |---    |     ---         |
