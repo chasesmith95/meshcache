@@ -2,6 +2,8 @@
 Decentralized Data Layer for Web 3.0
 
 
+Meshcache represents a revolution in the technology arena. 
+
 
 ## Important Links
 
@@ -10,7 +12,6 @@ Decentralized Data Layer for Web 3.0
 - [Registry](https://github.com/chasesmith95/meshcache/tree/master/registry)
 - [Explorer](https://github.com/chasesmith95/meshcache/tree/master/meshcache-explorer)
 - [Ora](https://github.com/chasesmith95/ora/blob/master/demo/README.md)
-
 
 ## Architecture 
 
