@@ -22,6 +22,7 @@ The core components:
 - Registry Contract and Authentication
 
 ## Demo
+There are several client demos for meshcache. 
 
 ## Tutorial
 
