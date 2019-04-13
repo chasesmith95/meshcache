@@ -47,6 +47,9 @@ This returns the associated service variables.
 
 
 ### getBootstraps(serviceId)
+```javascript
+
+```
 | name  |  type |  description  
 |---    |---    |     ---         |
 |  serviceId | uint256  |  id of the service |
