@@ -1,4 +1,4 @@
-# Cardano Demonstration
+# Cardano Client Demonstration
 
 Here is the Cardano demo.
 
