@@ -48,8 +48,8 @@ The core components:
 
 ## Demos
 There are several client demos for meshcache. 
-  - Cardano(https://github.com/chasesmith95/meshcache/tree/master/examples)
-  - EOS(https://github.com/chasesmith95/meshcache/tree/master/examples)
+  - [Cardano](https://github.com/chasesmith95/meshcache/tree/master/examples)
+  - [EOS](https://github.com/chasesmith95/meshcache/tree/master/examples)
 
 ## Tutorial
 Meshcache tutorials and documentation can be found in the following folders. 
