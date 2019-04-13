@@ -3,8 +3,8 @@
 Here is the Cardano demo.
 
 ## Installation
-### - Node 
-### - Web
+- ### Node
+- ### Web
 
 
 - web
