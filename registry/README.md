@@ -21,6 +21,7 @@ const Registry = require('meshcache-registry')
 ### getRegistryAddress()
 
 ```javascript
+registry.getRegistryAddress()
 
 ```
 
