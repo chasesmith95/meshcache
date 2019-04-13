@@ -6,9 +6,9 @@ Decentralized Data Layer for Web 3.0
 ## Important Links
 
 - [Ruffle](https://github.com/chasesmith95/meshcache/tree/master/authenticated%20data/ruffle)
-- [Authenticated Database (Curkel)]()
-- [Registry]()
-- [Explorer]()
+- [Authenticated Database (Curkel)](https://github.com/chasesmith95/meshcache/tree/master/authenticated%20data/curkel-db)
+- [Registry](https://github.com/chasesmith95/meshcache/tree/master/registry)
+- [Explorer](https://github.com/chasesmith95/meshcache/tree/master/meshcache-explorer)
 - [Ora](https://github.com/chasesmith95/ora/blob/master/demo/README.md)
 
 
@@ -20,16 +20,9 @@ The core components:
 - Mesh P2P Network 
 - Registry Contract and Authentication
 
+## Demo
+
+## Tutorial
 
 ## Next Steps
-Obviously, there are many cool features and functionality that can be added, here are a few that are on the top of our list.
-
-- Provider Integration
-
-- Dashboard Analytics
-
-- Service Creation
-
-- Service Discovery
-
-- Integration of plugins
+Obviously, there are many cool features and functionality that can be added.
