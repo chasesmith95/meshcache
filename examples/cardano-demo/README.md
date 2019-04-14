@@ -28,10 +28,7 @@ This should give you the following console message, and deploy the explorer to h
 
 Once the explorer is deployed, you should be able to navigate to http://localhost:3000 to get a view of the explorer. 
 
-It should look like: 
-
-
-
+####TO BE Implemented
 
 ### Explorer API
 
@@ -110,7 +107,6 @@ id: 56
 ```
 
 
-
 #### Blocks  
 
 ##### Not Implemented
@@ -174,11 +170,6 @@ ruffle.get(current_stats, 'supply')
 
 #### Epoch
 
-| name  |  type |  description  
-|---    |---    |     ---         |
-|  table | string  |  name of the table |
-|  schema | JSON  |  schema for the table |
-
 This creates a table with name, tableName, and returns a confirmation boolean if correct.
 
 ```javascript
@@ -188,22 +179,12 @@ ruffle.get(current_stats, 'epoch')
 
 #### Slot 
 
-| name  |  type |  description  
-|---    |---    |     ---         |
-|  table | string  |  name of the table |
-|  schema | JSON  |  schema for the table |
-
 This creates a table with name, tableName, and returns a confirmation boolean if correct.
 ```javascript
 ruffle.get(current_stats, 'epoch')
 ```
 
 #### Blockhash 
-
-| name  |  type |  description  
-|---    |---    |     ---         |
-|  table | string  |  name of the table |
-|  schema | JSON  |  schema for the table |
 
 This creates a table with name, tableName, and returns a confirmation boolean if correct.
 
