@@ -28,7 +28,7 @@ This should give you the following console message, and deploy the explorer to h
 
 Once the explorer is deployed, you should be able to navigate to http://localhost:3000 to get a view of the explorer. 
 
-####TO BE Implemented
+#### TO BE Implemented
 
 ### Explorer API
 
