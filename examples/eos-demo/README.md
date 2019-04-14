@@ -151,9 +151,7 @@ let schema = {
 var transactions = ruffle.create(table, schema)
 ```
 
-
 ### Blocks 
-
 
 
 ### Transactions
