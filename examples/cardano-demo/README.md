@@ -1,6 +1,6 @@
 # Cardano Client Demonstration
 
-Here is the Cardano demo.
+Here is the Cardano demo. It represents multiple different ways that the Ora Protocol can be utilized. 
 
 
 ## Explorer 
