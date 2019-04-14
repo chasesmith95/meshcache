@@ -146,23 +146,11 @@ The client is composed of three separate tables or indexes:
 
 ### Getting Tables 
 
-```javascript 
-
-
-```
-
-
-### Current Stats 
-
-
-#### Supply 
-
 | name  |  type |  description  
 |---    |---    |     ---         |
 |  table | string  |  name of the table |
 |  schema | JSON  |  schema for the table |
 
-This creates a table with name, tableName, and returns a confirmation boolean if correct.
 
 ```javascript
 let table = "transactions"
@@ -173,6 +161,16 @@ let schema = {
 var transactions = ruffle.create(table, schema)
 ```
 
+
+### Current Stats 
+
+#### Supply 
+
+This creates a table with name, tableName, and returns a confirmation boolean if correct.
+
+```javascript
+ruffle.get(current_stats, 'supply')
+```
 
 #### Epoch
 
@@ -184,12 +182,7 @@ var transactions = ruffle.create(table, schema)
 This creates a table with name, tableName, and returns a confirmation boolean if correct.
 
 ```javascript
-let table = "transactions"
-let schema = {
-  balance: 'uint'
-  account: 'string'
-}
-var transactions = ruffle.create(table, schema)
+ruffle.get(current_stats, 'epoch')
 ```
 
 
@@ -201,16 +194,9 @@ var transactions = ruffle.create(table, schema)
 |  schema | JSON  |  schema for the table |
 
 This creates a table with name, tableName, and returns a confirmation boolean if correct.
-
 ```javascript
-let table = "transactions"
-let schema = {
-  balance: 'uint'
-  account: 'string'
-}
-var transactions = ruffle.create(table, schema)
+ruffle.get(current_stats, 'epoch')
 ```
-
 
 #### Blockhash 
 
