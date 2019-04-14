@@ -12,7 +12,7 @@
 ```console
 git clone "https://github.com/chasesmith95/meshcache"
 cd meshcache 
-cd examples/cardano-demo
+cd examples/eos-demo
 npm install
 npm start
 ```
@@ -59,37 +59,6 @@ id: 56
 
 ```
 
-##### Epoch
-
-```
-curl GET "localhost:3000/epoch"
-```
-
-Returns 
-
-```JSON
-{
-epoch: "",
-id: 56 
-}
-
-```
-
-##### Slot 
-
-```
-curl GET "localhost:3000/slot"
-```
-
-Returns 
-
-```JSON
-{
-slot: "",
-id: 56 
-}
-
-```
 
 ##### BlockHash
 
@@ -120,17 +89,17 @@ id: 56
 
 _____________________________________________________________________
 
-## Cardano Node Client 
+## EOS Node Client 
 
 
 ## Installation and Use
 
 ```
-npm install --save cardano-client
+npm install --save eos-client
 ```
 
 ```javascript 
-const CardanoClient = require('cardano-client')
+const EOSClient = require('eos-client')
 ````
 
 
@@ -167,22 +136,6 @@ This creates a table with name, tableName, and returns a confirmation boolean if
 
 ```javascript
 ruffle.get(current_stats, 'supply')
-```
-
-#### Epoch
-
-This creates a table with name, tableName, and returns a confirmation boolean if correct.
-
-```javascript
-ruffle.get(current_stats, 'epoch')
-```
-
-
-#### Slot 
-
-This creates a table with name, tableName, and returns a confirmation boolean if correct.
-```javascript
-ruffle.get(current_stats, 'epoch')
 ```
 
 #### Blockhash 
