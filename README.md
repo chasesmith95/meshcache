@@ -52,6 +52,7 @@ There are several client demos for meshcache.
   - [EOS](https://github.com/chasesmith95/meshcache/tree/master/examples/eos-demo)
   - Tron 
   - Ethereum 
+  - Tezos
 
 ## Tutorials
 Meshcache tutorials and documentation can be found in the following folders. 
