@@ -1,6 +1,6 @@
 # Cardano Client Demonstration
 
-Here is the Cardano demo.
+Here is the Cardano demo. It represents multiple different ways that the Ora Protocol can be utilized. 
 
 
 ## Explorer 
@@ -28,10 +28,7 @@ This should give you the following console message, and deploy the explorer to h
 
 Once the explorer is deployed, you should be able to navigate to http://localhost:3000 to get a view of the explorer. 
 
-It should look like: 
-
-
-
+####TO BE Implemented
 
 ### Explorer API
 
@@ -110,7 +107,6 @@ id: 56
 ```
 
 
-
 #### Blocks  
 
 ##### Not Implemented
@@ -146,78 +142,49 @@ The client is composed of three separate tables or indexes:
 
 ### Getting Tables 
 
-```javascript 
+| name  |  type |  description  
+|---    |---    |     ---         |
+|  table | string  |  name of the table |
+|  schema | JSON  |  schema for the table |
 
 
+```javascript
+let table = "transactions"
+let schema = {
+  balance: 'uint'
+  account: 'string'
+}
+var transactions = ruffle.create(table, schema)
 ```
 
 
 ### Current Stats 
 
-
 #### Supply 
-
-| name  |  type |  description  
-|---    |---    |     ---         |
-|  table | string  |  name of the table |
-|  schema | JSON  |  schema for the table |
 
 This creates a table with name, tableName, and returns a confirmation boolean if correct.
 
 ```javascript
-let table = "transactions"
-let schema = {
-  balance: 'uint'
-  account: 'string'
-}
-var transactions = ruffle.create(table, schema)
+ruffle.get(current_stats, 'supply')
 ```
-
 
 #### Epoch
 
-| name  |  type |  description  
-|---    |---    |     ---         |
-|  table | string  |  name of the table |
-|  schema | JSON  |  schema for the table |
-
 This creates a table with name, tableName, and returns a confirmation boolean if correct.
 
 ```javascript
-let table = "transactions"
-let schema = {
-  balance: 'uint'
-  account: 'string'
-}
-var transactions = ruffle.create(table, schema)
+ruffle.get(current_stats, 'epoch')
 ```
 
 
 #### Slot 
 
-| name  |  type |  description  
-|---    |---    |     ---         |
-|  table | string  |  name of the table |
-|  schema | JSON  |  schema for the table |
-
 This creates a table with name, tableName, and returns a confirmation boolean if correct.
-
 ```javascript
-let table = "transactions"
-let schema = {
-  balance: 'uint'
-  account: 'string'
-}
-var transactions = ruffle.create(table, schema)
+ruffle.get(current_stats, 'epoch')
 ```
 
-
 #### Blockhash 
-
-| name  |  type |  description  
-|---    |---    |     ---         |
-|  table | string  |  name of the table |
-|  schema | JSON  |  schema for the table |
 
 This creates a table with name, tableName, and returns a confirmation boolean if correct.
 
