@@ -19,8 +19,7 @@ npm start
 This should give you the following console message, and deploy the explorer to http://localhost:3000
 
 ```console 
-
-
+explorer deployed!
 ````
 
 
@@ -200,10 +199,10 @@ var transactions = ruffle.create(table, schema)
 
 ### Blocks 
 
-
+##### To be implemented 
 
 ### Transactions
 
-
+##### To be implemented 
 
 
