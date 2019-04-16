@@ -178,22 +178,17 @@ ruffle.get(current_stats, 'epoch')
 
 #### Slot 
 
-This creates a table with name, tableName, and returns a confirmation boolean if correct.
+This gets the slot number from the current block. 
 ```javascript
-ruffle.get(current_stats, 'epoch')
+ruffle.get(current_stats, 'slot')
 ```
 
 #### Blockhash 
 
-This creates a table with name, tableName, and returns a confirmation boolean if correct.
+This gets the blockHash from the current stats. 
 
 ```javascript
-let table = "transactions"
-let schema = {
-  balance: 'uint'
-  account: 'string'
-}
-var transactions = ruffle.create(table, schema)
+ruffle.get(current_stats, 'blockHash')
 ```
 
 
