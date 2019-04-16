@@ -169,7 +169,7 @@ ruffle.get(current_stats, 'supply')
 
 #### Epoch
 
-This creates a table with name, tableName, and returns a confirmation boolean if correct.
+This gets the epoch number from the current block stats. 
 
 ```javascript
 ruffle.get(current_stats, 'epoch')
