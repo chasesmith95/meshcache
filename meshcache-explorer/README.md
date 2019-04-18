@@ -20,13 +20,13 @@ npm start
 npm start
 ```
 
+Upon deploying the explorer will be deployed to localhost:3000. 
 
-Upon deploying the explorer will be deployed to ....., with  a console message that looks like: 
-
+#### Output
+ 
 ```console
 
 ```
-
 
 The service interface should look like this. 
 
