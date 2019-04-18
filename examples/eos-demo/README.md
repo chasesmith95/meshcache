@@ -1,6 +1,7 @@
-# Cardano Client Demonstration
 
-Here is the Cardano demo. It represents multiple different ways that the Ora Protocol can be utilized. 
+
+# EOS Client Demonstration
+
 
 
 ## Explorer 
@@ -11,7 +12,7 @@ Here is the Cardano demo. It represents multiple different ways that the Ora Pro
 ```console
 git clone "https://github.com/chasesmith95/meshcache"
 cd meshcache 
-cd examples/cardano-demo
+cd examples/eos-demo
 npm install
 npm start
 ```
@@ -19,7 +20,8 @@ npm start
 This should give you the following console message, and deploy the explorer to http://localhost:3000
 
 ```console 
-explorer deployed!
+
+
 ````
 
 
@@ -27,7 +29,7 @@ explorer deployed!
 
 Once the explorer is deployed, you should be able to navigate to http://localhost:3000 to get a view of the explorer. 
 
-#### TO BE Implemented
+####TO BE Implemented
 
 ### Explorer API
 
@@ -57,37 +59,6 @@ id: 56
 
 ```
 
-##### Epoch
-
-```
-curl GET "localhost:3000/epoch"
-```
-
-Returns 
-
-```JSON
-{
-epoch: "",
-id: 56 
-}
-
-```
-
-##### Slot 
-
-```
-curl GET "localhost:3000/slot"
-```
-
-Returns 
-
-```JSON
-{
-slot: "",
-id: 56 
-}
-
-```
 
 ##### BlockHash
 
@@ -118,17 +89,17 @@ id: 56
 
 _____________________________________________________________________
 
-## Cardano Node Client 
+## EOS Node Client 
 
 
 ## Installation and Use
 
 ```
-npm install --save cardano-client
+npm install --save eos-client
 ```
 
 ```javascript 
-const CardanoClient = require('cardano-client')
+const EOSClient = require('eos-client')
 ````
 
 
@@ -167,37 +138,20 @@ This creates a table with name, tableName, and returns a confirmation boolean if
 ruffle.get(current_stats, 'supply')
 ```
 
-#### Epoch
-
-This gets the epoch number from the current block stats. 
-
-```javascript
-ruffle.get(current_stats, 'epoch')
-```
-
-
-#### Slot 
-
-This gets the slot number from the current block. 
-```javascript
-ruffle.get(current_stats, 'slot')
-```
-
 #### Blockhash 
 
-This gets the blockHash from the current stats. 
+This creates a table with name, tableName, and returns a confirmation boolean if correct.
 
 ```javascript
-ruffle.get(current_stats, 'blockHash')
+let table = "transactions"
+let schema = {
+  balance: 'uint'
+  account: 'string'
+}
+var transactions = ruffle.create(table, schema)
 ```
-
 
 ### Blocks 
 
-##### To be implemented 
 
 ### Transactions
-
-##### To be implemented 
-
-
