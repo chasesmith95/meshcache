@@ -108,14 +108,42 @@ id: 56
 
 #### Blocks  
 
-##### Not Implemented
+###### Not Implemented
 
+
+```
+curl GET "localhost:3000/block/{:hash}"
+```
+
+
+Returns 
+
+```JSON
+{
+blockHash: "",
+id: 56 
+}
+
+```
 
 #### Transactions 
 
-##### Not Implemented
+###### Not Implemented
+
+```
+curl GET "localhost:3000/transactions/{:id}"
+```
 
 
+Returns 
+
+```JSON
+{
+blockHash: "",
+id: 56 
+}
+
+```
 _____________________________________________________________________
 
 ## Cardano Node Client 
