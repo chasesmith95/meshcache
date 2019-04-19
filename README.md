@@ -10,11 +10,14 @@
 With the main features being filtering, sorting, and Elasticsearch-esque text search.
 Our product has a current Testnet for its registration, with an API authentication mechanism on its way. People will be able to check out the registry via the registry explorer. 
 
-Our costs do not grow linearly as users make requests within the network though. Our costs lower as more users join and requests are a nonissue. This is a result of the mesh.
+> Our costs do not grow linearly as users make requests within the network though. Our costs lower as more users join and 
+> requests are a nonissue. This is a result of the mesh.
 
 Furthermore, we are in the process of incorporating an analytics dashboard, and have begun to onboard our first customer: a top 10 game developer for EOS.
 
-Our technology edge is the fact that we have an authenticated nosql db structure (that no one else has), as well as an optimized IPFS to quickly and distribute data. We are working on integrating this edge network and testing it for product, but early estimates look good.
+> Our technology edge is the fact that we have an authenticated nosql db structure (that no one else has), as well as an 
+> optimized IPFS to quickly and distribute data. We are working on integrating this edge network and testing it for product, 
+> but early estimates look good.
 
 As the solution progresses we are intent on further developing our authenticated nosql database to include partitioning, orchestration, fast synchronization, and complete integration with our mesh network. With these additional features, we will outfit our database solution to be used directly for decentralized applications, as well as a centralized one.
 
