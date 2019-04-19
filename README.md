@@ -39,7 +39,6 @@ Check us out!
 - [Vision](https://github.com/chasesmith95/meshcache/blob/master/docs/Vision.md)
 - [Deck](https://docs.google.com/presentation/d/18GQehThOp7VNl6xLlPt_mcy19jflA6v-VmS74s90AvM)
 - [Technology](https://github.com/chasesmith95/meshcache/blob/master/docs/Vision.md)
-- [Product Roadmap](https://github.com/chasesmith95/meshcache/blob/master/docs/Vision.md)
 
 ## Architecture 
 The core components:
@@ -65,7 +64,7 @@ Tutorials on the way!
 ## Contribution Guidelines
 
 ## Next Steps
-Obviously, there are many cool features and functionality that can be added.
+Obviously, there are many cool features and functionality that can be added. [Product Roadmap](https://github.com/chasesmith95/meshcache/blob/master/docs/Vision.md)
 
 
 
