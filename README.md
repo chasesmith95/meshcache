@@ -44,9 +44,9 @@ Check us out!
 ## Architecture 
 The core components:
 
-- Authenticated Database 
-- Mesh P2P Network 
-- Registry Contract and Authentication
+- *Authenticated Database* 
+- *Mesh P2P Network* 
+- *Registry Contract and Authentication*
 
 
 ## Demos
