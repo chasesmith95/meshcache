@@ -27,7 +27,7 @@ explorer deployed!
 
 Once the explorer is deployed, you should be able to navigate to http://localhost:3000 to get a view of the explorer. 
 
-#### TO BE Implemented
+#### TO Be Implemented
 
 ### Explorer API
 
