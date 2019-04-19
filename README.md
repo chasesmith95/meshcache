@@ -43,9 +43,9 @@ The core components:
 
 ## Documents
 - [White paper]()
-- [Vision]()
+- [Vision](https://github.com/chasesmith95/meshcache/blob/master/docs/Vision.md)
 - [Deck]()
-- [Technology]()
+- [Technology](https://github.com/chasesmith95/meshcache/blob/master/docs/Vision.md)
 
 ## Demos
 There are several client demos for meshcache. 
