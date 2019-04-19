@@ -1,12 +1,11 @@
 # {meshcache}
 ### Decentralized Data Layer for Web 3.0
 
-
-Meshcache represents a revolution in the technology arena. 
+ Meshcache represents a revolution in the technology arena. 
 
 ## Intro
 
-#### A blockchain index that features consensus-less writes and reads and can be integrated by any chain
+### A blockchain index that features consensus-less writes and reads and can be integrated by any chain
 
 With the main features being filtering, sorting, and Elasticsearch-esque text search.
 Our product has a current Testnet for its registration, with an API authentication mechanism on its way. People will be able to check out the registry via the registry explorer. 
@@ -32,20 +31,19 @@ Check us out!
 - [Explorer](https://github.com/chasesmith95/meshcache/tree/master/meshcache-explorer)
 - [Ora](https://github.com/chasesmith95/ora/blob/master/demo/README.md)
   
-## Architecture 
+## Documents
+- [White paper]()
+- [Vision](https://github.com/chasesmith95/meshcache/blob/master/docs/Vision.md)
+- [Deck]()
+- [Technology](https://github.com/chasesmith95/meshcache/blob/master/docs/Vision.md)
 
+## Architecture 
 The core components:
 
 - Authenticated Database 
 - Mesh P2P Network 
 - Registry Contract and Authentication
 
-
-## Documents
-- [White paper]()
-- [Vision](https://github.com/chasesmith95/meshcache/blob/master/docs/Vision.md)
-- [Deck]()
-- [Technology](https://github.com/chasesmith95/meshcache/blob/master/docs/Vision.md)
 
 ## Demos
 There are several client demos for meshcache. 
