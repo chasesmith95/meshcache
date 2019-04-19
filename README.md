@@ -35,8 +35,8 @@ Check us out!
 - [Ora](https://github.com/chasesmith95/ora/blob/master/demo/README.md)
   
 ## Documents
-- [White paper](https://docs.google.com/document/d/1ClcK_PHRY42--Z6huYmXAlD6VUnTquJMVo-gHRejUxg)
 - [Vision](https://github.com/chasesmith95/meshcache/blob/master/docs/Vision.md)
+- [White paper](https://docs.google.com/document/d/1ClcK_PHRY42--Z6huYmXAlD6VUnTquJMVo-gHRejUxg)
 - [Deck](https://docs.google.com/presentation/d/18GQehThOp7VNl6xLlPt_mcy19jflA6v-VmS74s90AvM)
 - [Technology](https://github.com/chasesmith95/meshcache/blob/master/docs/Vision.md)
 
