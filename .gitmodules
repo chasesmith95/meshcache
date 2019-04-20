@@ -4,3 +4,6 @@
 [submodule "freeboard"]
 	path = freeboard
 	url = https://github.com/chasesmith95/freeboard.git
+[submodule "graphql-js"]
+	path = graphql-js
+	url = https://github.com/chasesmith95/graphql-js.git
