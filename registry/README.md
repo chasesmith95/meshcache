@@ -5,13 +5,13 @@
 ## Installation
 
 ```
-npm install meshcache-registry
+npm install ora-protocol-registry
 ```
 
 ## Use
 
 ```
-const Registry = require('meshcache-registry')
+const Registry = require('ora-protocol-registry')
 ```
 
 ## API
