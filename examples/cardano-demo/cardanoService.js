@@ -21,6 +21,7 @@ ingestor.start()
 
 ingestor.on("update", async (data) => {
   console.log("Updating....")
+  console.log(data)
   await ruffle.request(data)
 });
 

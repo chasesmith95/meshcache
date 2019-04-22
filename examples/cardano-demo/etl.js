@@ -40,7 +40,8 @@ class Ingestor extends EventEmitter {
       //clean the data
       let supply = data;
       var id = Date.now();
-      this.emit('update', {name: "current", key: "supply", value: {supply: supply, id: id}});
+      this.emit('update', {name: "current",
+      id: "ID", action: 'put', key: "supply", value: {supply: supply, id: id}});
     })
 
 
@@ -70,10 +71,13 @@ class Ingestor extends EventEmitter {
       var id = Date.now();
       //Monotonically increasing
       //console.log(blockHash, id)
-      this.emit('update', {name: "current", key: "blockHash", value: {blockHash: blockHash, id: id}});
+      this.emit('update', {name: "current",
+      id: "ID", action: 'put', key: "blockHash", value: {blockHash: blockHash, id: id}});
       this.datasource.block(blockHash);
-      this.emit('update', {name: "current", key: "epoch", value: {epoch: epoch, id: id}});
-      this.emit('update', {name: "current", key: "slot", value: {slot: slot, id: id}});
+      this.emit('update', {name: "current", action: 'put', key: "epoch", value: {epoch: epoch, id: id},
+      id: "ID"});
+      this.emit('update', {name: "current", action: 'put', key: "slot", value: {slot: slot, id: id},
+      id: "ID"});
 
     //this.emit('update', {name: "current", key: "blockTime", value: {blockTime: blockTime, id: id}});
 
