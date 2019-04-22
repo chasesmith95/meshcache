@@ -1,6 +1,6 @@
 {
-  "name": "meshcache-registry",
-  "version": "1.0.0",
+  "name": "ora-protocol-registry",
+  "version": "1.0.1",
   "description": "",
   "main": "registry.js",
   "scripts": {
