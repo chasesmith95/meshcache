@@ -108,8 +108,6 @@ id: 56
 
 #### Blocks  
 
-###### Not Implemented
-
 
 ```
 curl GET "localhost:3000/block/{:hash}"
@@ -127,8 +125,6 @@ id: 56
 ```
 
 #### Transactions 
-
-###### Not Implemented
 
 ```
 curl GET "localhost:3000/transactions/{:id}"
@@ -222,10 +218,17 @@ ruffle.get(current_stats, 'blockHash')
 
 ### Blocks 
 
-##### To be implemented 
+This gets the block from a blockhash. 
+
+```javascript
+ruffle.get(blocks, :blockHash)
+```
 
 ### Transactions
 
-##### To be implemented 
+This gets the block from a transaction id. 
 
+```javascript
+ruffle.get(transactions, :transaction_id)
+```
 
