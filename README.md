@@ -43,7 +43,7 @@ Check us out!
 ## Architecture 
 The core components:
 
-- *Authenticated Database* 
+- *Authenticated Data Structure* 
 - *Mesh P2P Network* 
 - *Registry Contract and Authentication*
 
