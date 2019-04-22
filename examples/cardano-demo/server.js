@@ -1,12 +1,22 @@
 const express = require('express')
 const app = express()
 const Service = require('./service')
+const cardanoService = require('./cardanoService');
 const port = 3000
 
+
+
+
 app.get('/supply', async (request, response) => {
-  var resp = await Service.supply();
-  //console.log(resp[0].value)
-  response.send(resp[0].value)
+  let req = {
+    action: 'get',
+    name: 'current',
+    key: 'supply'
+  }
+  console.log("request", req)
+  var resp = await cardanoService.request(req);
+  console.log(resp)
+  response.send(resp)
 })
 
 
@@ -25,6 +35,9 @@ app.get('/blockHash', async (request, response) => {
   var resp = await Service.blockHash();
   response.send(resp[0].value)
 })
+
+
+
 
 app.listen(port, (err) => {
   if (err) {
