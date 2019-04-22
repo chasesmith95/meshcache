@@ -27,7 +27,7 @@ ingestor.on("update", async (data) => {
 
 
 async function request(req) {
-  let value = await Ruffle.request(req);
+  let value = await ruffle.request(req);
   return value;
 }
 
