@@ -224,6 +224,7 @@ This gets the block from a blockhash.
 ruffle.get(blocks, :blockHash)
 ```
 
+
 ### Transactions
 
 This gets the block from a transaction id. 
@@ -232,3 +233,4 @@ This gets the block from a transaction id.
 ruffle.get(transactions, :transaction_id)
 ```
 
+## Schema definitions
