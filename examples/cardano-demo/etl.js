@@ -1,4 +1,4 @@
-//service
+//Service
 //The frontend
 //Can be a master or not
 
@@ -41,7 +41,6 @@ class Ingestor extends EventEmitter {
       let supply = data;
       var id = Date.now();
       this.emit('update', {name: "current", key: "supply", value: {supply: supply, id: id}});
-
     })
 
 
@@ -85,9 +84,8 @@ class Ingestor extends EventEmitter {
       //Curkel.put(STAT_TABLE, "latest", data)
       //console.log(Curkel.put(STAT_TABLE, "latest"))
     })
-
-
   }
+
 
 
 async start() {
