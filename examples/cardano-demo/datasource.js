@@ -31,7 +31,7 @@ class Datasource extends EventEmitter {
 
 
     this.url = url || 'http://cardano-explorer.cardano-mainnet.iohk.io'
-    this.interval = 2000
+    this.interval = 6000
     this.running = false
     /*
       Set-up the event handlers...
@@ -65,7 +65,6 @@ class Datasource extends EventEmitter {
         url: url
       })
       if (response.data.Right) {
-        console.log(response.data.Right)
         this.emit('supply', response.data.Right);
       }
     } catch (err) {
@@ -109,10 +108,10 @@ async block(data) {
       url: url
     })
     if (response.data.Right) {
-      console.log("Block data:, ")
-      console.log(response.data.Right)
+      //console.log("Block data:, ")
+      //console.log(response.data.Right)
       var data = response.data.Right;
-      this.emit('block', data);
+      this.emit('latest', data);
     }
 
   } catch (err) {
@@ -124,7 +123,7 @@ async block(data) {
 /*
 /api/blocks/txs/(hash of block)
 
-//Returns a list of transactions 
+//Returns a list of transactions
 */
 async transactions(data) {
   var url = this.url + "/api/blocks/txs/" + data
@@ -134,7 +133,7 @@ async transactions(data) {
       url: url
     })
     this.emit('transactions', response.data.Right);
-    console.log(response.data.Right)
+    //console.log(response.data.Right)
   } catch (err) {
   console.log(err)
   }
@@ -168,7 +167,6 @@ async transactions(data) {
 
   async poll() {
     setTimeout(() => {this.emit('poll')}, this.interval)
-
   }
 
 

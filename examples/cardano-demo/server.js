@@ -11,31 +11,58 @@ app.get('/supply', async (request, response) => {
   let req = {
     action: 'get',
     name: 'current',
-    key: 'supply'
+    key: 'supply',
+    id: "ID"
   }
-  console.log("request", req)
   var resp = await cardanoService.request(req);
-  console.log(resp)
   response.send(resp)
 })
 
 
 app.get('/slot', async (request, response) => {
-  var resp = await Service.slot();
-  response.send(resp[0].value)
+  let req = {
+    action: 'get',
+    name: 'current',
+    key: 'slot',
+    id: "ID"
+  }
+  var resp = await cardanoService.request(req);
+  response.send(resp)
 })
 
 
 app.get('/epoch', async (request, response) => {
-  var resp = await Service.epoch();
-  response.send(resp[0].value)
+  let req = {
+    action: 'get',
+    name: 'current',
+    key: 'epoch',
+    id: "ID"
+  }
+  var resp = await cardanoService.request(req);
+  response.send(resp)
 })
 
 app.get('/blockHash', async (request, response) => {
-  var resp = await Service.blockHash();
-  response.send(resp[0].value)
+  let req = {
+    action: 'get',
+    name: 'current',
+    key: 'blockHash',
+    id: "ID"
+  }
+  var resp = await cardanoService.request(req);
+  response.send(resp)
 })
 
+app.get('/block', async (request, response) => {
+  let req = {
+    action: 'get',
+    name: 'current',
+    key: 'block',
+    id: "ID"
+  }
+  var resp = await cardanoService.request(req);
+  response.send(resp)
+})
 
 
 

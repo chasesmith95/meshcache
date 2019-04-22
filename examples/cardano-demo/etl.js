@@ -12,7 +12,6 @@ const Datasource = require("./datasource");
     const v = randomBytes(300);
     */
 
-
 const EventEmitter = require('events')
 
 class Ingestor extends EventEmitter {
@@ -23,14 +22,14 @@ class Ingestor extends EventEmitter {
     //event handlers
     this.datasource.on('lastTXs', (data) => {
       //clean the data
-
+      /*
       //convert to transactions ...
       for (var i = 0; i < data.length; i++) {
             console.log(data[i].cteId);
             console.log(data[i].cteTimeIssued);
             console.log(data[i].cteAmount.getCoin);
         }
-
+        */
     })
 
 
@@ -47,13 +46,17 @@ class Ingestor extends EventEmitter {
 
 
     this.datasource.on('block', (data) => {
-      console.log("New Block")
+      //console.log("New Block")
+      let block = data;
+      var id = Date.now();
+      this.emit('update', {name: "current",
+      id: "ID", action: 'put', key: "block", value: {block: block , id: id}});
       console.log(data)
     });
 
     this.datasource.on('transaction', (data) => {
-      console.log("New transactions")
-      console.log(data)
+      //console.log("New transactions")
+      //console.log(data)
     });
 
     this.datasource.on('latest', (data) => {
@@ -64,7 +67,7 @@ class Ingestor extends EventEmitter {
       data = data.cbsEntry
       var blockHash = data.cbeBlkHash;
       var blockTime = data.cbeTimeIssued;
-    //  console.log(blockTimeIssued)
+      //console.log(blockTimeIssued)
       //var blockNumber = ;
       var epoch = data.cbeEpoch;
       var slot = data.cbeSlot;
