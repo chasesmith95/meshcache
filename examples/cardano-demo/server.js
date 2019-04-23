@@ -8,11 +8,12 @@ const port = 3000
 
 
 app.get('/supply', (request, response) => {
+  var id = Date.now()
   let req = {
     action: 'get',
     name: 'current',
     key: 'supply',
-    id: "ID"
+    id: id
   }
   try {
     cardanoService.request(req).then(function(resp) {
@@ -28,11 +29,12 @@ app.get('/supply', (request, response) => {
 
 
 app.get('/slot', async (request, response) => {
+  var id = Date.now()
   let req = {
     action: 'get',
     name: 'current',
     key: 'slot',
-    id: "ID"
+    id: id
   }
   try {
     cardanoService.request(req).then(function(resp) {
@@ -48,11 +50,12 @@ app.get('/slot', async (request, response) => {
 
 
 app.get('/epoch', async (request, response) => {
+  var id = Date.now()
   let req = {
     action: 'get',
     name: 'current',
     key: 'epoch',
-    id: "ID"
+    id: id
   }
   try {
     cardanoService.request(req).then(function(resp) {
@@ -67,11 +70,12 @@ app.get('/epoch', async (request, response) => {
 })
 
 app.get('/blockHash', async (request, response) => {
+  var id = Date.now()
   let req = {
     action: 'get',
     name: 'current',
     key: 'blockHash',
-    id: "ID"
+    id: id
   }
   try {
     cardanoService.request(req).then(function(resp) {
@@ -86,11 +90,12 @@ app.get('/blockHash', async (request, response) => {
 })
 
 app.get('/blocks/current', async (request, response) => {
+  var id = Date.now()
   let req = {
     action: 'get',
     name: 'current',
     key: 'block',
-    id: "ID"
+    id: id
   }
   try {
     cardanoService.request(req).then(function(resp) {
@@ -105,12 +110,12 @@ app.get('/blocks/current', async (request, response) => {
   })
 
 app.get('/blocks', async (request, response) => {
-
+  var id = Date.now()
   let req = {
     action: 'get',
     name: 'blocks',
     key: request.query.key,
-    id: "ID"
+    id: id
   }
   try {
     cardanoService.request(req).then(function(resp) {
