@@ -12,7 +12,9 @@ const Datasource = require("./datasource");
     const v = randomBytes(300);
     */
 
-const EventEmitter = require('events')
+const EventEmitter = require('events');
+//const once = EventEmitter.once;
+
 
 class Ingestor extends EventEmitter {
   constructor(url) {
@@ -20,22 +22,8 @@ class Ingestor extends EventEmitter {
     this.datasource = new Datasource(url)
 
     //event handlers
-    this.datasource.on('lastTXs', (data) => {
-      //clean the data
-      /*
-      //convert to transactions ...
-      for (var i = 0; i < data.length; i++) {
-            console.log(data[i].cteId);
-            console.log(data[i].cteTimeIssued);
-            console.log(data[i].cteAmount.getCoin);
-        }
-        */
-    })
 
-
-
-
-    this.datasource.on('supply', async (data) => {
+    this.datasource.on('supply', (data) => {
       //clean the data
       let supply = data;
       var id = Date.now();
@@ -44,55 +32,44 @@ class Ingestor extends EventEmitter {
     })
 
 
+    this.datasource.on('slot', (data) => {
+      let slot = data;
+      var id = slot;
+      this.emit('update', {name: "current",
+      id: "ID", action: 'put', key: "slot", value: {slot: slot, id: id}});
+    })
+
+
+    this.datasource.on('epoch', (data) => {
+      let epoch = data;
+      var id = epoch;
+      this.emit('update', {name: "current",
+      id: "ID", action: 'put', key: "epoch", value: {epoch: epoch, id: id}});
+    })
 
     this.datasource.on('block', (data) => {
-      //console.log("New Block")
       let block = data;
-      var id = Date.now();
+      var id = block.cbeTimeIssued;
+      var key = block.cbeBlkHash;
       this.emit('update', {name: "current",
       id: "ID", action: 'put', key: "block", value: {block: block , id: id}});
-      console.log(data)
+
+      this.emit('update', {name: "blocks",
+      id: "ID", action: 'put', key: key, value: {block: block , id: id}});
     });
 
-    this.datasource.on('transaction', (data) => {
+    this.datasource.on('blockHash', (data) => {
+      let blockHash = data;
+      var id = Date.now();
+      this.emit('update', {name: "current",
+      id: "ID", action: 'put', key: "blockHash", value: {blockHash: blockHash , id: id}});
+    });
+
+    this.datasource.on('transactions', (data) => {
       //console.log("New transactions")
       //console.log(data)
     });
-
-    this.datasource.on('latest', (data) => {
-      //clean the data
-
-      //console.log(data)
-      //(key = "latest")
-      data = data.cbsEntry
-      var blockHash = data.cbeBlkHash;
-      var blockTime = data.cbeTimeIssued;
-      //console.log(blockTimeIssued)
-      //var blockNumber = ;
-      var epoch = data.cbeEpoch;
-      var slot = data.cbeSlot;
-      var id = Date.now();
-      //Monotonically increasing
-      //console.log(blockHash, id)
-      this.emit('update', {name: "current",
-      id: "ID", action: 'put', key: "blockHash", value: {blockHash: blockHash, id: id}});
-      this.datasource.block(blockHash);
-      this.emit('update', {name: "current", action: 'put', key: "epoch", value: {epoch: epoch, id: id},
-      id: "ID"});
-      this.emit('update', {name: "current", action: 'put', key: "slot", value: {slot: slot, id: id},
-      id: "ID"});
-
-    //this.emit('update', {name: "current", key: "blockTime", value: {blockTime: blockTime, id: id}});
-
-      // Emit these events
-      //(index, key, value)
-
-      //key blockHash
-      //Curkel.put(STAT_TABLE, "latest", data)
-      //console.log(Curkel.put(STAT_TABLE, "latest"))
-    })
-  }
-
+}
 
 
 async start() {
@@ -116,7 +93,5 @@ function main() {
   var ingestor  = new Ingestor();
   ingestor.start();
 }
-
-main()
 
 module.exports = Ingestor

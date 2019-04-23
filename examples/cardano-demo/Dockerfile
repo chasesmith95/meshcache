@@ -1,10 +1,9 @@
+
 FROM node:alpine
 
 COPY ./ /app/
 
 WORKDIR /app/
-
-RUN apk update && apk add bash python g++ make && rm -rf /var/cache/apk/*
 
 COPY ./package.json /app/
 
