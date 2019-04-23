@@ -3,11 +3,21 @@
 Here is the Cardano demo. It represents multiple different ways that the Ora Protocol can be utilized. 
 
 
-## Explorer 
 
+
+## Explorer 
 
 ### Setup and Installation
 
+
+#### Docker 
+
+```console
+docker pull (image)
+docker run 
+```
+
+#### Computer 
 ```console
 git clone "https://github.com/chasesmith95/meshcache"
 cd meshcache 
@@ -110,7 +120,7 @@ id: 56
 
 
 ```
-curl GET "localhost:3000/block/{:hash}"
+curl GET "localhost:3000/blocks?key=blockHash}"
 ```
 
 
@@ -118,7 +128,7 @@ Returns
 
 ```JSON
 {
-blockHash: "",
+block: "",
 id: 56 
 }
 
