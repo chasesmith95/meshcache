@@ -7,15 +7,23 @@ const port = 3000
 
 
 
-app.get('/supply', async (request, response) => {
+app.get('/supply', (request, response) => {
   let req = {
     action: 'get',
     name: 'current',
     key: 'supply',
     id: "ID"
   }
-  var resp = await cardanoService.request(req);
-  response.send(resp)
+  try {
+    cardanoService.request(req).then(function(resp) {
+      response.send(resp)
+    }).catch(function(error) {
+      console.log(error)
+      response.send(err)
+    });
+  } catch (err) {
+    response.send(err)
+  }
 })
 
 
@@ -26,8 +34,16 @@ app.get('/slot', async (request, response) => {
     key: 'slot',
     id: "ID"
   }
-  var resp = await cardanoService.request(req);
-  response.send(resp)
+  try {
+    cardanoService.request(req).then(function(resp) {
+      response.send(resp)
+    }).catch(function(error) {
+      console.log(error)
+      response.send(error)
+    });
+  } catch (err) {
+    response.send(err)
+  }
 })
 
 
@@ -38,8 +54,16 @@ app.get('/epoch', async (request, response) => {
     key: 'epoch',
     id: "ID"
   }
-  var resp = await cardanoService.request(req);
-  response.send(resp)
+  try {
+    cardanoService.request(req).then(function(resp) {
+      response.send(resp)
+    }).catch(function(error) {
+      console.log(error)
+      response.send(error)
+    });
+  } catch (err) {
+    response.send(err)
+  }
 })
 
 app.get('/blockHash', async (request, response) => {
@@ -49,21 +73,56 @@ app.get('/blockHash', async (request, response) => {
     key: 'blockHash',
     id: "ID"
   }
-  var resp = await cardanoService.request(req);
-  response.send(resp)
+  try {
+    cardanoService.request(req).then(function(resp) {
+      response.send(resp)
+    }).catch(function(error) {
+      console.log(error)
+      response.send(error)
+    });
+  } catch (err) {
+    response.send(err)
+  }
 })
 
-app.get('/block', async (request, response) => {
+app.get('/blocks/current', async (request, response) => {
   let req = {
     action: 'get',
     name: 'current',
     key: 'block',
     id: "ID"
   }
-  var resp = await cardanoService.request(req);
-  response.send(resp)
-})
+  try {
+    cardanoService.request(req).then(function(resp) {
+      response.send(resp)
+    }).catch(function(error) {
+      console.log(error)
+      response.send(error)
+    });
+  } catch (err) {
+    response.send(err)
+  }
+  })
 
+app.get('/blocks', async (request, response) => {
+
+  let req = {
+    action: 'get',
+    name: 'blocks',
+    key: request.query.key,
+    id: "ID"
+  }
+  try {
+    cardanoService.request(req).then(function(resp) {
+      response.send(resp)
+    }).catch(function(error) {
+      console.log(error)
+      response.send(error)
+    });
+  } catch (err) {
+    response.send(err)
+  }
+})
 
 
 app.listen(port, (err) => {

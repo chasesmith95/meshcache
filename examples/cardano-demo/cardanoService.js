@@ -10,6 +10,7 @@
 //const EventEmitter = require('events');
 const Ruffle = require('ora-ruffle')
 const Ingestor = require("./etl");
+const EventEmitter = require('events')
 
 
 //We want to get the ruffle and the other stuff here
@@ -19,9 +20,11 @@ var ingestor = new Ingestor();
 
 ingestor.start()
 
+
+
 ingestor.on("update", async (data) => {
-  console.log("Updating....")
-  console.log(data)
+  //console.log("Updating....")
+  //console.log(data)
   await ruffle.request(data)
 });
 

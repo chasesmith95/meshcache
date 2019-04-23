@@ -43,6 +43,7 @@ class Datasource extends EventEmitter {
       this.poll()
     })
 
+/*
     this.on('lastTXs', (data) => {
       this.txStats(data);
     })
@@ -54,7 +55,8 @@ class Datasource extends EventEmitter {
     })
   }
 
-
+*/
+}
 
 
   async supply() {
@@ -68,34 +70,9 @@ class Datasource extends EventEmitter {
         this.emit('supply', response.data.Right);
       }
     } catch (err) {
-    console.log(err)
+    //console.log(err)
     }
   }
-
-
-  async stats(data) {
-    var url = this.url + "/api/txs/summary/" + data.cteId
-    try {
-      var response = await axios({
-        method: 'get',
-        url: url
-      })
-      if (response.data.Right) {
-        this.emit('stats', response.data.Right);
-      }
-
-  } catch (err) {
-    console.log(err)
-  }
-  }
-
-
-
-
-  async txStats(data) {
-    this.stats(data[0]);
-  }
-
 
 /*
 /api/blocks/summary/(hash of block)
@@ -108,17 +85,17 @@ async block(data) {
       url: url
     })
     if (response.data.Right) {
-      //console.log("Block data:, ")
-      //console.log(response.data.Right)
       var data = response.data.Right;
-      this.emit('latest', data);
+      this.emit('block', data.cbsEntry);
+      this.emit('slot', data.cbsEntry.cbeSlot)
+      this.emit('epoch', data.cbsEntry.cbeEpoch)
+      this.emit('blockHash', data.cbsEntry.cbeBlkHash)
     }
 
   } catch (err) {
-  console.log(err)
+  //console.log(err)
   }
 }
-
 
 /*
 /api/blocks/txs/(hash of block)
@@ -133,14 +110,27 @@ async transactions(data) {
       url: url
     })
     this.emit('transactions', response.data.Right);
-    //console.log(response.data.Right)
   } catch (err) {
-  console.log(err)
+    //console.log(err)
   }
+}
+
+async getCurrent() {
+  let blockHash = await this.lastTXs();
+  return blockHash
 }
 
 
 
+
+  async update() {
+    this.supply();
+
+    //current stats
+    let currBlock = await this.getCurrent();
+    this.block(currBlock)
+    this.transactions(currBlock)
+  }
 
 
 
@@ -151,18 +141,45 @@ async transactions(data) {
           method: 'get',
           url: url
         })
-        //console.log(response.data.Right)
-        this.emit('lastTXs', response.data.Right);
+        let value = await this.txStats(response.data.Right)
+        return value
+        //this.emit('lastTXs', response.data.Right);
     } catch (err) {
-      console.log(err)
+      //console.log(err)
     }
   }
 
+  async stats(data) {
+    var url = this.url + "/api/txs/summary/" + data.cteId
+    try {
+      var response = await axios({
+        method: 'get',
+        url: url
+      })
+      if (response.data.Right) {
+       //console.log("Response for stats", response.data.Right);
 
-  async update() {
-    this.lastTXs();
-    this.supply();
+       let value = response.data.Right.ctsBlockHash
+       return value
+      }
+
+  } catch (err) {
+    //console.log(err)
   }
+  }
+
+
+
+
+  async txStats(data) {
+    return await this.stats(data[0]);
+  }
+
+
+
+
+
+
 
 
   async poll() {

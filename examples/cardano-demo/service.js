@@ -21,10 +21,10 @@ var updater = new Updater();
 
 //
 const Ruffle = require('ora-ruffle')
-var ruffle = new Ruffle()
+var ruffle = new Ruffle();
 
 
-const once = EventEmitter.once;
+
 /*change this*/
 
 async function get(name, key) {
