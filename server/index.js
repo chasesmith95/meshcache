@@ -6,12 +6,17 @@ const dapps = [
     author: 'dapp author',
     address: '0x01',
     network_id: '4',
+    blockchain_id: '1',  
+    blockchain_name: 'ethereum',
   },
   {
     title: 'dapp2',
     author: 'dapp author',
     address: '0x02',
     network_id: '4',
+    blockchain_id: '1',  
+    blockchain_name: 'ethereum',
+
   },
 
 ];
@@ -21,7 +26,9 @@ const typeDefs = gql`
     title: String
     author: String,
     address: String,
-    network_id: String
+    network_id: String,
+    blockchain_id: String,
+    blockchain_name: String
   }
 
   # The "Query" type is the root of all GraphQL queries.
