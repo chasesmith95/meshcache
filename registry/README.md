@@ -78,6 +78,21 @@ This returns the associated bootstrap nodes with the service.
 ```JSON
 
 ```
+## Schema 
+
+### Service
+```javascript
+    struct Service {
+        uint256 serviceId;
+        string id;
+        address owner;
+        uint256 index;
+        string name;
+        bytes32[] bootstraps;
+        uint256 stake;
+
+    }
+```
 
 
 
