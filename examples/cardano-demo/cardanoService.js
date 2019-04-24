@@ -23,15 +23,21 @@ ingestor.start()
 
 
 ingestor.on("update", async (data) => {
-  //console.log("Updating....")
-  //console.log(data)
-  await ruffle.request(data)
+  console.log("Updating....")
+  console.log(data)
+  let v = await ruffle.request(data)
+  console.log("Success!", v)
 });
 
 
 async function request(req) {
-  let value = await ruffle.request(req);
-  return value;
+  try {
+    let value = await ruffle.request(req);
+    return value;
+  } catch(err) {
+    console.log(err)
+  }
+
 }
 
 
