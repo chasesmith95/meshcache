@@ -47,14 +47,12 @@ class Datasource extends EventEmitter {
     this.on('lastTXs', (data) => {
       this.txStats(data);
     })
-
     this.on('stats', (data) => {
       var blockhash = data.ctsBlockHash;
       this.block(blockhash)
       this.transactions(blockhash)
     })
   }
-
 */
 }
 
