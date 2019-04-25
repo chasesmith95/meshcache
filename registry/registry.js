@@ -280,5 +280,5 @@ async function main() {
 }
 */
 
-registry = {getBootstraps, getService, getServices, getContractAddress};
+const registry = {getBootstraps, getService, getServices, getContractAddress};
 module.exports = registry;
