@@ -1,7 +1,7 @@
 const express = require('express')
 const app=  express()
 //const Service = require('./service')
-//const cardanoService = require('./cardanoService');
+const cardanoService = require('./cardanoService');
 const port = 3000
 
 //const EventEmitter = require('events');

@@ -174,12 +174,6 @@ async getCurrent() {
   }
 
 
-
-
-
-
-
-
   async poll() {
     setTimeout(() => {this.emit('poll')}, this.interval)
   }
