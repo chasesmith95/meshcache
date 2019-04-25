@@ -1,4 +1,5 @@
 const { ApolloServer, gql } = require('apollo-server');
+const Registry = require('../registry/registry')
 
 const dapps = [
   {
