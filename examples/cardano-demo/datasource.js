@@ -31,7 +31,7 @@ class Datasource extends EventEmitter {
 
 
     this.url = url || 'http://cardano-explorer.cardano-mainnet.iohk.io'
-    this.interval = 6000
+    this.interval = 2000
     this.running = false
     /*
       Set-up the event handlers...
