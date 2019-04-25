@@ -79,7 +79,6 @@ app.get('/epoch', async (request, response) => {
   }
   try {
     let value = await ruffle.request(req);
-    console.log(value)
     response.send(value)
   } catch (err) {
     console.log(err)
@@ -139,7 +138,7 @@ app.get('/blocks', async (request, response) => {
   }
   try {
     let value = await ruffle.request(req)
-    response.send(value)
+    response.send(JSON.parse(value))
   } catch (err) {
     response.send(err)
   }
