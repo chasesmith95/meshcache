@@ -1,0 +1,16 @@
+type Query {
+  currentSupply: Supply
+
+}
+
+type Supply {
+  supply: Float
+  id: Float
+  proof: Proof
+}
+
+type Proof {
+  type: Int
+  nodes: [String]
+  value: String
+}

@@ -21,6 +21,7 @@
     "events": "^3.0.0",
     "events.once": "^2.0.2",
     "express": "^4.16.4",
+    "graphql-yoga": "^1.17.4",
     "ora-ruffle": "^1.0.16",
     "pify": "^4.0.1",
     "randombytes": "^2.1.0",

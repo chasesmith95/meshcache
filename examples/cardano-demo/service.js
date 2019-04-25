@@ -4,7 +4,7 @@
 
 'use strict'
 
-const Updater = require('./updater')
+const Updater = require('./updater');
 
 
 //const Ingestor = require("./etl");
