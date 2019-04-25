@@ -9,8 +9,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "apollo": "^2.8.3",
+    "apollo-datasource-rest": "^0.3.2",
     "apollo-server": "^2.4.8",
+    "apollo-server-express": "^2.4.8",
+    "connect": "^3.6.6",
+    "express": "^4.16.4",
+    "express-graphql": "^0.8.0",
+    "fs": "^0.0.1-security",
     "graphql": "^14.2.1",
+    "graphql-tools": "^4.0.4",
+    "qs-middleware": "^1.0.3",
+    "sofa-api": "^0.3.0",
     "truffle": "^5.0.11",
     "web3": "^1.0.0-beta.51"
   }
