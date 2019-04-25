@@ -2,40 +2,30 @@
 
 ### The data layer of web 3.0
 
-The Ora Protocol combines authenticated datastructures and peer-to-peer topology, to enable the next generation of decentralized infrastructure. It moves away from consensus and instead anchors data spaces to static verification systems, and structuring data in an Authenticated NoSQL database. 
+The Ora Protocol combines authenticated datastructures and peer-to-peer topology, to enable the next generation of decentralized infrastructure. It moves away from consensus and instead anchors data spaces to static verification systems, and structuring data in an Authenticated NoSQL database. In doing this, Ora Protocol is able to change the current paradaigm from server-client, to trustless network of data sets. This has several important goals:
 
-![](overview.png)
-
-In doing this, Ora Protocol is able to change the current paradaigm from server-client, to trustless network of data sets. This has several important goals:
-
-- *Move towards zero latency*
-- *Serving data to the edge from the edge*
-- *Consensusless Reads and Writes*
-
-
-# Features
-
-- ### Authenticated and trustless data spaces
-- ### Limitless scalability
-- ### Greater security
+- #### Authenticated and trustless data spaces
+- #### Easy scalability through open membership and edge participation
+- #### Greater security and flexibility
+- #### Benefits of production grade frameworks.
 
 # Solution 
-The overall solution is designed to allow the authentication of data spaces. The powerful filtering and aggregations enable data indexes to be used for many different applications.
+The overall solution is designed to allow the authentication of data spaces. The powerful filtering and aggregations, and storage enable data indexes to be used for many different applications. 
 
-![](blockchain_index.png)
-
+![](solution_1.png)
 
 - ### Blockchain Index
 The first implementation of the Ora Protocol is as a blockchain index. The blocks come through an Ora Node, then filter the blocks into the respective headers, transactions, receipts, and logs. From this position, it is possible to look at state, events, and transactions themselves. 
 
 - ### DApp Index
-The DApp index represents a filter based on one or several contract addresses. Through this, it is possible to 
+The DApp index represents a filter based on one or several contract addresses. Through this, it is possible to store variables for decentralized applications. Moreover, there is the ability to combine the values from multiple different DApps or even chains.
 
-## Future Releases 
-- *Hybrid Data* 
-- *External Data* 
+- ### Off-chain Data 
+The applications for storing off-chain data in a trustless manner are numerous, with the initial use case being for zero-knowledge rollups and smart contract data held off-chain.
 
-![](future_updates.png)
+## Anatomy of a query
+
+![](query_anatomy.png)
 
 
 # Architecture
@@ -67,26 +57,28 @@ The verification and security of data can be broken down into two different spac
 
 ![](anchoring.png)
 
-- ##### Proof-of-Work 
-- ##### Proof-of-stake/Proof-of-Authority/Delegated-Proof-of-Stake 
+### Blockchain Data
+The power of blockchains are that they are trustless and have methods builtin for verification or anchoring of data. This means that we can use these methods to anchor chains, and thus their data. 
 
+#### Proof-of-Work 
+For Proof-of-Work chains the longest chain can be found through total work, and verified through the hash of the chain. This is how the SPV clients ensure that blocks are correct. 
 
-### Accumulators
-Accumulators provide a way to anchor data, and are being used in production. Through the use of lt_hash, and other homomorphic encryption techniques it becomes fast to verify blocks in the current state, and using dynamic accumulators it is possible to determine if blocks are included in the main chain. 
+#### Proof-of-Stake
+Proof-of-State Chains can verified through the signatures, and the hash can be verified by taking the hash of the elements. Furthermore, signatures of validators provide an even easier metric for checking validity of blocks.
 
-### Recursive Zero Knowledge Proofs
-Using recursive zero knowledge proofs with the genesis block, it is possible to prove that a block is in a blockchain. This works with both types of blockchain and is seen in such projects as Corda. 
+Other methods to improve verification speed including snapshotting blocks and using accumulators. 
 
-### Signatures
+### Accumulators and Recursive Zero Knowledge Proofs
+Accumulators provide a way to anchor data, and are being used in production. Through the use of lt_hash, and other homomorphic encryption techniques it becomes fast to verify blocks in the current state, and using dynamic accumulators it is possible to determine if blocks are included in the main chain. Proofs of this variety, use witnesses to establish membership of elements.[https://www.cs.purdue.edu/homes/ninghui/papers/accumulator_acns07.pdf](https://www.cs.purdue.edu/homes/ninghui/papers/accumulator_acns07.pdf). Using recursive zero knowledge proofs with the genesis block, it is possible to prove that a block is in a blockchain. This works with both types of blockchain and is seen in such projects as Corda. 
 
+### Signatures and Consensus for Off-chain Data
 Signatures involve the owner(s) of a data space, signing updates in order to give the mesh the ability to verify. In most cases these will be external data sources, but initially blockchains might use signatures as a way for fast verification. 
 
 - *Signatures*
 - *Threshold Signatures*
 - *BLS Signatures*
 
-
-### Access control lists 
+##### Access control lists 
 Instead of having a single governing entity, it is possible to give different members different accesses and verify these. Using this method, transaction throughput and data ownership go hand-in-hand.
 
 ## Authentication (V1)
@@ -105,3 +97,11 @@ The signature-based authentication scheme is quite similar to traditional signat
 ```javascript
 (address, key, id, signature)
 ```
+
+## Future vision
+The overall vision of the Ora Protocol 
+- *Move towards zero latency*
+- *Serving data to the edge from the edge*
+- *Consensusless Reads and Writes*
+
+![](overview.png)
