@@ -27,27 +27,45 @@ app.use("/graphiql", graphql({ schema, graphiql: true }));
 app.use("/api", sofa({ schema }));
 
 app.get('/api/getContractAddress', (req, res) => {
-  res.json({ address: Registry.getContractAddress() });
+  //console.log(Registry.getContractAddress());
+  Registry.getContractAddress().then(val => {
+    res.json({ address: val });
+  })
 })
 
 app.get('/api/getServices', (req, res) => {
-  res.json({ services: Registry.getServices() });
+  //console.log(Registry.getServices());
+  Registry.getServices().then(val => {
+    res.json({ services: val });
+
+  })
 })
 
 app.get('/api/getService/:serviceId', function (req, res) {
   const serviceId=parseInt(req.params["serviceId"]);
-  res.json({ serviceId: serviceId, service: Registry.getService(serviceId) });
+  //console.log(Registry.getService(serviceId));
+  Registry.getService(serviceId).then(val => {
+    res.json({ serviceId: serviceId, service: val });
+  }).catch(error => {
+    console.log(error);
+  })
 })
 
 app.get('/api/getBootstraps/:serviceId', function (req, res) {
   const serviceId=parseInt(req.params["serviceId"]);
-  res.json({ serviceId: serviceId, service: Registry.getBootstraps(serviceId) });
+  //console.log(Registry.getBootstraps(serviceId));
+  Registry.getBootstraps(serviceId).then(val => {
+    res.json({ serviceId: serviceId, service: val});
+
+  }).catch(error => {
+    console.log(error);
+  })
 })
 
 
 app.listen({ port: 4000 }, () =>
 {
-  console.log(`🚀 GraphQL Server ready at http://localhost:4000${server.graphqlPath}`);
+  console.log(`🚀 Apollo GraphQL Server ready at http://localhost:4000${server.graphqlPath}`);
   console.log(`🚀 REST API Server ready at http://localhost:4000/api/ 
                     (e.g. http://localhost:4000/api/dapps/
                           http://localhost:4000/api/getContractAddress/)`);
