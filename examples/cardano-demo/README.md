@@ -13,8 +13,8 @@ Here is the Cardano demo. It represents multiple different ways that the Ora Pro
 #### Docker 
 
 ```console
-docker pull (image)
-docker run 
+docker push chasesmith95/cardano-explorer-ora:latest
+docker run -p 3000:3000 chasesmith95/cardano-explorer-ora:latest
 ```
 
 #### Computer 
