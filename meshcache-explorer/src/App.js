@@ -9,7 +9,7 @@ class App extends Component {
     super(props)
 
     this.state={
-      service : "services card",
+      service : "",
       table : [],
       node : "node card",
       subscribers : "subscribers card",
@@ -60,12 +60,13 @@ class App extends Component {
         </header>
 
 
-
+        {this.state.service ? 
         <div className = "App-stats">
           <h1>Service: {this.state.service}</h1>
           <h1>Node: {this.state.node}</h1>
           <h1>Subscribers: {this.state.subscribers}</h1>
         </div>
+        : null}
 
 
       <div className = "App-table">
