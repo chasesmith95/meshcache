@@ -1,38 +1,51 @@
-'use strict';
-
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Registry from './regis.js';
+import * as web3Utils from "./util/web3Utils";
 
-var service = "services card";
-var table = "services table";
-var node = "node card";
-var subscribers = "subscribers card";
-var name = "{service registry}"
-var contractAddress = "contract address";
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    var self=this;
+
+    this.state={
+      service : "services card",
+      table : "",
+      node : "node card",
+      subscribers : "subscribers card",
+      name : "{service registry}",
+      contractAddress : web3Utils.getContractAddress()
+    }
+
+    web3Utils.getServices().then(services => {
+      self.setState({table:services.toString()});
+    })
+
+
+
+
+  }
   render() {
     return (
       <div className="App">
         <header>
           <img src={logo} className="App-logo" alt="logo" />
-          <h1> {name} </h1>
-          <h3> {contractAddress} </h3>
+          <h1> Name: {this.state.name} </h1>
+          <h3> Contract Address: {this.state.contractAddress} </h3>
         </header>
 
 
 
         <div className = "App-stats">
-          <h1>{service}</h1>
-          <h1>{node}</h1>
-          <h1>{subscribers}</h1>
+          <h1>{this.state.service}</h1>
+          <h1>{this.state.node}</h1>
+          <h1>{this.state.subscribers}</h1>
         </div>
 
 
       <div className = "App-table">
-        <h1>{table}</h1>
+        <h1>Services: {this.state.table}</h1>
       </div>
 
 
