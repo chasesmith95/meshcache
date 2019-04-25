@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "apollo": "^2.8.3",
+    "apollo-datasource-rest": "^0.3.2",
     "apollo-server": "^2.4.8",
     "graphql": "^14.2.1",
     "truffle": "^5.0.11",
