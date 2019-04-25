@@ -32,7 +32,6 @@ This should give you the following console message, and deploy the explorer to h
 explorer deployed!
 ````
 
-
 ### Explorer Dashboard
 
 Once the explorer is deployed, you should be able to navigate to http://localhost:3000 to get a view of the explorer. 
