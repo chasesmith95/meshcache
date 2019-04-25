@@ -18,15 +18,14 @@ const EventEmitter = require('events')
 var ruffle = new Ruffle();
 var ingestor = new Ingestor();
 
-ingestor.start()
+//ingestor.start()
 
 
 
 ingestor.on("update", async (data) => {
   console.log("Updating....")
   console.log(data)
-  let v = await ruffle.request(data)
-  console.log("Success!", v)
+  await request(JSON.parse(data));
 });
 
 
