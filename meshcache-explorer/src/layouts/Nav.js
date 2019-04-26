@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -26,7 +27,7 @@ const drawerWidth = 240;
 
 const styles = theme => ({
     root: {
-      flexGrow: 1,
+     display: 'flex',
     },
     grow: {
       flexGrow: 1,
@@ -46,7 +47,7 @@ const styles = theme => ({
         }),
       },
       menuButton: {
-        marginLeft: -12,
+        marginLeft: 12,
         marginRight: 20,
       },
       hide: {
@@ -120,10 +121,15 @@ class Nav extends Component {
         const { auth, anchorEl } = this.state;
         const openMenu = Boolean(anchorEl);
         return(
-      <div className={classes.root}>
-        
-        <AppBar position="static">
-          <Toolbar>
+        <div className={classes.root}>
+        <CssBaseline />
+        <AppBar
+            position="fixed"
+            className={classNames(classes.appBar, {
+            [classes.appBarShift]: openNav,
+            })}
+        >
+            <Toolbar disableGutters={!openNav}>
             <IconButton
                 color="inherit"
                 aria-label="Open drawer"
@@ -193,8 +199,14 @@ class Nav extends Component {
           <Divider />
           
         </Drawer>
+        <main
+          className={classNames(classes.content, {
+            [classes.contentShift]: openNav,
+          })}
+        >
         {this.props.children}
-      </div>
+        </main>
+        </div>
         )
     }
 }
