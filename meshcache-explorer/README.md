@@ -30,11 +30,6 @@ Upon deploying the explorer will be deployed to localhost:3000.
 
 The service interface should look like this. 
 
-![alt text][meshcache-ui]
-
-[meshcache-ui]:https://github.com/chasesmith95/meshcache/blob/master/meshcache-explorer/meshcache-ui.png "Logo Title Text 2"
-
-
 ## Next Steps
 
 We are looking to integrate a better user interface into our registry, and develop an api that can be used without the registry client.
