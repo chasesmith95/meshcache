@@ -47,15 +47,6 @@ The core components:
 - *Mesh P2P Network* 
 - *Registry Contract and Authentication*
 
-
-## Demos
-There are several client demos for meshcache. 
-  - [Cardano](https://github.com/chasesmith95/meshcache/tree/master/examples/cardano-demo)
-  - [EOS](https://github.com/chasesmith95/meshcache/tree/master/examples/eos-demo)
-  - [Tezos](https://github.com/chasesmith95/meshcache/tree/master/examples/tezos-demo)
-  - [Ethereum](https://github.com/chasesmith95/meshcache/tree/master/examples/ethereum-demo)
-  - [Tron](https://github.com/chasesmith95/meshcache/tree/master/examples/tron-demo)
-
 ## Tutorials
 Meshcache tutorials and documentation can be found in the following folders. 
 
