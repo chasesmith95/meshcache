@@ -41,7 +41,7 @@ class Server extends Component {
       subscribers : "subscribers card",
       name : "{service registry}",
       contractAddress : ''
-      
+
     }
 
   }
@@ -49,7 +49,7 @@ class Server extends Component {
   componentDidMount() {
     this.getEthData();
     document.title = "Server Registry";
-  
+
   }
 
   getEthData=() => {
@@ -72,10 +72,10 @@ class Server extends Component {
     self.setState({name: 'Server ' + serviceId})
     web3Utils.getService(serviceId).then(service => {
       console.log(service);
-      self.setState({ service: service[0].toString(), 
-                      name: service[1], 
-                      id: service[2], 
-                      owner: service[3], 
+      self.setState({ service: service[0].toString(),
+                      name: service[1],
+                      id: service[2],
+                      owner: service[3],
                       stake: service[4].toString()});
     }).catch(error => {
       self.setState({ service: '',
@@ -83,7 +83,7 @@ class Server extends Component {
         id: serviceId,
         owner: '',
         stake: ''
-  
+
       });
     });
     web3Utils.getBootstraps(serviceId).then(bootstraps => {
@@ -92,28 +92,28 @@ class Server extends Component {
         seen[bootstrap]=1;
         return bootstrap;
       })
-   
+
       self.setState({node:Object.keys(seen)});
     }).catch(error => {
       self.setState({node:[]});
     });
   }
- 
+
   render() {
     const { classes } = this.props;
     var self=this;
 
     return (
-     
+
       <div className="App">
             <GridList className={classes.gridList}>
-                        
+
               {this.state.table.map(serviceId => {
-                return <GridListTile key={"Server" + serviceId} 
+                return <GridListTile key={"Server" + serviceId}
                           onClick={() => {
                             self.getService(serviceId);
                         }}
-                          
+
                           >
                   <GridListTileBar
                     title={"Server " + serviceId}
@@ -127,7 +127,7 @@ class Server extends Component {
                     }}
                     onMouseLeave={() => {
                       document.body.style.cursor='initial';
-                      
+
                     }}
                   />
                 </GridListTile>
@@ -135,7 +135,7 @@ class Server extends Component {
             </GridList>
 
 
-        {this.state.service && this.state.node ? 
+        {this.state.service && this.state.node ?
         <Card className={classes.card}>
         <CardContent>
           <div className = "App-stats">
@@ -166,7 +166,7 @@ class Server extends Component {
                      <td style={{width: '50%', textAlign:'left'}}>
                           {this.state.node.map(address => {
                         return <div key={address}><font size={'2'}>
-                        <a href='http://localhost:4000/graphql' target="_newWindow">
+                        <a href={address} target="_newWindow">
                         {address}</a></font></div>
                       })}</td>
                  </tr>
@@ -175,7 +175,7 @@ class Server extends Component {
                  </tr>
             </tbody>
           </table>
-          
+
         </div>
         </CardContent>
         </Card>

@@ -234,6 +234,16 @@ let abi = [
 
 let contract = web3.eth.Contract(abi, registryAddress);
 
+function hex_to_ascii(str)
+ {
+	var hex  = str.toString();
+	var resp = '';
+	for (var n = 2; n < hex.length; n += 2) {
+		resp += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+	}
+	return resp;
+ }
+
 
 export const getContractAddress = () => {
     return registryAddress;
@@ -248,10 +258,13 @@ export const  getServices = async() => {
 export const getService = async (serviceId) => {
     var service = contract.methods.getService(serviceId).call();
     return service;
-    
+
 }
 
-export const getBootstraps = (serviceId) => {
-    var bootStraps=contract.methods.getBootstraps(serviceId).call();
-    return bootStraps;
+export const getBootstraps = async (serviceId) => {
+  var bootstraps = await contract.methods.getBootstraps(serviceId).call();
+  for (let i = 0; i < bootstraps.length; i++) {
+    bootstraps[i] = hex_to_ascii(bootstraps[i])
+  }
+  return bootstraps;
 }
