@@ -259,10 +259,22 @@ async function getService(serviceId) {
     return service;
 }
 
+function hex_to_ascii(str)
+ {
+	var hex  = str.toString();
+	var resp = '';
+	for (var n = 2; n < hex.length; n += 2) {
+		resp += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+	}
+	return resp;
+ }
+
 async function getBootstraps(serviceId) {
-  var bootStraps = await contract.methods.getBootstraps(serviceId).call();
-  //console.log(bootStraps)
-  return bootStraps;
+  var bootstraps = await contract.methods.getBootstraps(serviceId).call();
+	for (let i = 0; i < bootstraps.length; i++) {
+		bootstraps[i] = hex_to_ascii(bootstraps[i])
+	}
+  return bootstraps;
 }
 
 
@@ -271,14 +283,18 @@ async function main() {
   var d = new Date();
   var start = d.getTime();
   var services  = await getServices();
+	console.log(services)
   var service = await getService(services[0])
-  var bootStraps = await getService(services[0])
+  var bootstraps = await getBootstraps(services[1])
+	console.log(bootstraps)
   var e = new Date();
   var end = e.getTime();
 
   console.log(end - start);
 }
-*/
 
+
+main()
+*/
 const registry = {getBootstraps, getService, getServices, getContractAddress};
 module.exports = registry;

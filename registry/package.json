@@ -1,6 +1,6 @@
 {
   "name": "ora-protocol-registry",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "registry.js",
   "scripts": {
@@ -11,6 +11,6 @@
   "dependencies": {
     "solc": "^0.5.7",
     "truffle": "^5.0.11",
-    "web3": "^1.0.0-beta.51"
+    "web3": "^1.0.0-beta.55"
   }
 }
