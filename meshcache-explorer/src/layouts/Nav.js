@@ -84,7 +84,7 @@ const styles = theme => ({
         marginLeft: 0,
       },
 });
-  
+
 class Nav extends Component {
     state = {
         openNav: false,
@@ -100,8 +100,8 @@ class Nav extends Component {
     handleDrawerClose = () => {
         this.setState({ openNav: false });
     };
-    
-    
+
+
     handleChange = event => {
         this.setState({ auth: event.target.checked });
     };
@@ -113,11 +113,11 @@ class Nav extends Component {
     handleClose = () => {
         this.setState({ anchorEl: null });
     };
-    
+
     render() {
         const { classes, theme } = this.props;
         const { openNav } = this.state;
-    
+
         const { auth, anchorEl } = this.state;
         const openMenu = Boolean(anchorEl);
         return(
@@ -137,7 +137,7 @@ class Nav extends Component {
                 className={classNames(classes.menuButton, openNav && classes.hide)}
                 >
               <MenuIcon />
-              
+
             </IconButton>
             <Typography variant="h6" color="inherit" className={classes.grow}>
               Server Registry
@@ -197,7 +197,7 @@ class Nav extends Component {
             ))}
           </List>
           <Divider />
-          
+
         </Drawer>
         <main
           className={classNames(classes.content, {
@@ -210,10 +210,10 @@ class Nav extends Component {
         )
     }
 }
-       
+
 Nav.propTypes = {
     classes: PropTypes.object.isRequired,
     theme: PropTypes.object.isRequired,
 };
-  
+
 export default withStyles(styles, { withTheme: true })(Nav);

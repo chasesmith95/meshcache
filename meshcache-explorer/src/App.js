@@ -10,22 +10,22 @@ class App extends Component {
     super(props)
 
     this.state={
-     
+
     }
 
   }
 
- 
- 
+
+
   render() {
     return (
       <Nav>
         <Switch>
           <Route exact path="/" component={Server} />
-        
+
           <Redirect from="*" to="/" />
         </Switch>
-      </Nav> 
+      </Nav>
 
 
     );

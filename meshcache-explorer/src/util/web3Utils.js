@@ -256,7 +256,7 @@ export const  getServices = async() => {
 
 
 export const getService = async (serviceId) => {
-    var service = contract.methods.getService(serviceId).call();
+    var service = await contract.methods.getService(serviceId).call();
     return service;
 
 }

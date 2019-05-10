@@ -1,4 +1,4 @@
-//service0
+//service
 //The frontend
 //Can be a master or not
 
