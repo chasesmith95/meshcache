@@ -1,0 +1,21 @@
+{
+  "name": "dswaps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bn.js": "^4.11.8",
+    "fs": "0.0.1-security",
+    "graphql-yoga": "^1.17.4",
+    "js-yaml": "^3.13.1",
+    "ora-ruffle": "^1.0.19",
+    "ruffle": "^1.1.0",
+    "web3": "^1.0.0-beta.55"
+  }
+}

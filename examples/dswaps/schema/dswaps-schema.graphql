@@ -1,0 +1,12 @@
+type Query {
+  Reserves(infura: Boolean): [Reserve]
+  TokenReserves(tokenName: String!): [Reserve]
+  Reserve(reserveContract: String!): Reserve
+}
+
+type Reserve  {
+  reserveContractAddress: String!
+  tokenContractAddress: String!
+  tokenName: String!
+  proof: String!
+}
