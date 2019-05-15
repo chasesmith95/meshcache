@@ -157,7 +157,6 @@ class Server extends Component {
                         aria-labelledby="customized-dialog-title"
                         open={self.state.dialogOpen}
                         onBackdropClick={() => {
-                          console.log(self.state.node);
                           self.handleClose();
   
                         }}
