@@ -21,10 +21,14 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
-
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 const drawerWidth = 240;
-
+const theme = createMuiTheme({
+  palette: {
+    type: 'dark',
+  },
+});
 const styles = theme => ({
     root: {
      display: 'flex',
@@ -115,13 +119,14 @@ class Nav extends Component {
     };
 
     render() {
-        const { classes, theme } = this.props;
+        const { classes } = this.props;
         const { openNav } = this.state;
 
         const { auth, anchorEl } = this.state;
         const openMenu = Boolean(anchorEl);
         return(
-        <div className={classes.root}>
+      <MuiThemeProvider theme={theme}>
+                  <div className={classes.root}>
         <CssBaseline />
         <AppBar
             position="fixed"
@@ -207,6 +212,8 @@ class Nav extends Component {
         {this.props.children}
         </main>
         </div>
+    </MuiThemeProvider>
+
         )
     }
 }
