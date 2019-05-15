@@ -157,6 +157,7 @@ class Server extends Component {
                         aria-labelledby="customized-dialog-title"
                         open={self.state.dialogOpen}
                         onBackdropClick={() => {
+                          console.log(self.state.node);
                           self.handleClose();
   
                         }}
@@ -191,14 +192,17 @@ class Server extends Component {
                                     <tr><td style={{width: '50%', textAlign:'right'}}><b>Stake:</b></td>
                                         <td style={{width: '50%', textAlign:'left'}}>{this.state.stake}</td>
                                     </tr>
-                                    <tr><td style={{width: '50%', textAlign:'right'}}><b>Node:</b></td>
+                                    {self.state.node && self.state.node.length > 0 && self.state.node.toString().replace(/\W/g, '') ? 
+                                      <tr><td style={{width: '50%', textAlign:'right'}}><b>Node:</b></td>
                                         <td style={{width: '50%', textAlign:'left'}}>
                                               {this.state.node.map(address => {
-                                            return <div key={address}><font size={'2'}>
-                                            <a href={address} target="_newWindow">
-                                            {address}</a></font></div>
+                                            return <span key={address}>
+                                            <a href={address} target="_newWindow" >
+                                            <font color={'white'} size={'2'}><b>{address}</b></font></a></span>
                                           })}</td>
                                     </tr>
+                                        : null}
+                                    
                                     <tr><td style={{width: '50%', textAlign:'right'}}><b>Subscribers:</b></td>
                                         <td style={{width: '50%', textAlign:'left'}}></td>
                                     </tr>
