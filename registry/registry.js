@@ -259,7 +259,6 @@ async function getService(serviceId) {
     return service;
 }
 
-<<<<<<< HEAD
 function hex_to_ascii(str)
  {
 	var hex  = str.toString();
@@ -276,12 +275,6 @@ async function getBootstraps(serviceId) {
 		bootstraps[i] = hex_to_ascii(bootstraps[i])
 	}
   return bootstraps;
-=======
-async function getBootstraps(serviceId) {
-  var bootStraps = await contract.methods.getBootstraps(serviceId).call();
-  //console.log(bootStraps)
-  return bootStraps;
->>>>>>> 218752ea90bb9b57a4c849971897986d627fc90b
 }
 
 
@@ -290,28 +283,18 @@ async function main() {
   var d = new Date();
   var start = d.getTime();
   var services  = await getServices();
-<<<<<<< HEAD
-	console.log(services)
+  console.log(services)
   var service = await getService(services[0])
   var bootstraps = await getBootstraps(services[1])
-	console.log(bootstraps)
-=======
-  var service = await getService(services[0])
-  var bootStraps = await getService(services[0])
->>>>>>> 218752ea90bb9b57a4c849971897986d627fc90b
+  console.log(bootstraps)
   var e = new Date();
   var end = e.getTime();
 
   console.log(end - start);
 }
-<<<<<<< HEAD
 
 
 main()
 */
-=======
-*/
-
->>>>>>> 218752ea90bb9b57a4c849971897986d627fc90b
 const registry = {getBootstraps, getService, getServices, getContractAddress};
 module.exports = registry;

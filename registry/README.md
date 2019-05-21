@@ -1,18 +1,15 @@
 
-# Meshcache Registry
+# Proxima Registry
 
 
 ## Installation
 
-```
-npm install ora-protocol-registry
-```
+npm install yarn
+yarn
 
 ## Use
 
-```
-const Registry = require('ora-protocol-registry')
-```
+node index.js
 
 ## API
 

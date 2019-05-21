@@ -1,4 +1,4 @@
-# Meshcache Service Explorer
+# Proxima Service Explorer
 
 The service explorer is designed to show the services and tables within the space. To check out the live version direct your attention here :). 
 
