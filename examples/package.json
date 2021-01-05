@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "curkel-db": "^1.0.4",
     "events": "3.0.0",
     "express": "^4.16.4",
