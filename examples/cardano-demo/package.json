@@ -14,7 +14,7 @@
   "author": "chase",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "bcrypto": "^3.1.5",
     "curkel-db": "^1.0.7",
