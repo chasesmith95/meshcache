@@ -20,7 +20,7 @@
     "curkel-db": "^1.0.7",
     "events": "^3.0.0",
     "events.once": "^2.0.2",
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "graphql-yoga": "^1.17.4",
     "ora-ruffle": "^1.0.16",
     "pify": "^4.0.1",
